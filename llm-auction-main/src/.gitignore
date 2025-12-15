@@ -1,0 +1,34 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# MacOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Log files
+*.log
+
+# Model files / checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Videos or large media files (optional)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Node (if your project has frontend)
+node_modules/
