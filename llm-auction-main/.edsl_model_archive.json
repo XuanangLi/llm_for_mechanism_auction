@@ -1,11 +1,11 @@
 {
     "metadata": {
         "title": "Model Information Archive",
-        "description": "This archive contains data about available models. Auto-generated on 2025-12-14T02:41:07.893005.",
-        "created_at": "2025-12-14T02:41:07.893005",
+        "description": "This archive contains data about available models. Auto-generated on 2025-12-15T21:44:03.722182.",
+        "created_at": "2025-12-15T21:44:03.722182",
         "fetcher_name": "coop_working"
     },
-    "created_at": "2025-12-14T02:41:07.893005",
+    "created_at": "2025-12-15T21:44:03.722182",
     "data": {
         "anthropic": [
             {
@@ -318,7 +318,7 @@
                 "raw_data": {
                     "id": "amazon.nova-pro-v1:0",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 18.8,
                     "usd_per_1M_output_tokens": 75.0
                 },
@@ -486,7 +486,7 @@
                 "raw_data": {
                     "id": "mistral.magistral-small-2509",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 18.8,
                     "usd_per_1M_output_tokens": 75.0
                 },
@@ -2670,7 +2670,7 @@
                 "raw_data": {
                     "id": "gpt-4.1-nano",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.1,
                     "usd_per_1M_output_tokens": 0.4
                 },
@@ -2682,7 +2682,7 @@
                 "raw_data": {
                     "id": "gpt-4.1-nano-2025-04-14",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.1,
                     "usd_per_1M_output_tokens": 0.4
                 },
@@ -3368,7 +3368,7 @@
                 "raw_data": {
                     "id": "gpt-5.2",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 1.25,
                     "usd_per_1M_output_tokens": 10.0
                 },
@@ -3696,21 +3696,9 @@
                 "raw_data": {
                     "id": "Qwen/Qwen3-VL-32B-Instruct",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 5.0,
                     "usd_per_1M_output_tokens": 5.0
-                },
-                "original_class": "dict"
-            },
-            {
-                "service_name": "together",
-                "id": "Salesforce/Llama-Rank-V1",
-                "raw_data": {
-                    "id": "Salesforce/Llama-Rank-V1",
-                    "works_with_text": true,
-                    "works_with_images": false,
-                    "usd_per_1M_input_tokens": 0.1,
-                    "usd_per_1M_output_tokens": 0.1
                 },
                 "original_class": "dict"
             },
@@ -3803,18 +3791,6 @@
                 "id": "deepcogito/cogito-v2-preview-llama-70B",
                 "raw_data": {
                     "id": "deepcogito/cogito-v2-preview-llama-70B",
-                    "works_with_text": true,
-                    "works_with_images": false,
-                    "usd_per_1M_input_tokens": 5.0,
-                    "usd_per_1M_output_tokens": 5.0
-                },
-                "original_class": "dict"
-            },
-            {
-                "service_name": "together",
-                "id": "deepseek-ai/DeepSeek-R1-0528-tput",
-                "raw_data": {
-                    "id": "deepseek-ai/DeepSeek-R1-0528-tput",
                     "works_with_text": true,
                     "works_with_images": false,
                     "usd_per_1M_input_tokens": 5.0,

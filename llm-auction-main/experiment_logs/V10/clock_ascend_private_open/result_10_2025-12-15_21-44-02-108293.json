@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            122,
+            71,
+            158
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 70
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 122
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 122
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 122
+            }
+        },
+        "profit": [
+            0,
+            0,
+            36.0
+        ],
+        "common": 66,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            93,
+            84,
+            102
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 83
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 93
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 93
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 93
+            }
+        },
+        "profit": [
+            0,
+            0,
+            9.0
+        ],
+        "common": 30,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            65,
+            92,
+            88
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 64
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 87
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 87
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 87
+            }
+        },
+        "profit": [
+            0,
+            5.0,
+            0
+        ],
+        "common": 30,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            122,
+            175,
+            111
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 111
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 122
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 122
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 122
+            }
+        },
+        "profit": [
+            0,
+            53.0,
+            0
+        ],
+        "common": 76,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            128,
+            73,
+            104
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 73
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 104
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 104
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 104
+            }
+        },
+        "profit": [
+            24.0,
+            0,
+            0
+        ],
+        "common": 61,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            87,
+            132,
+            101
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 87
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 100
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 100
+            }
+        },
+        "profit": [
+            0,
+            32.0,
+            0
+        ],
+        "common": 34,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            160,
+            168,
+            133
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 132
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 160
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 160
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 160
+            }
+        },
+        "profit": [
+            0,
+            8.0,
+            0
+        ],
+        "common": 78,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            127,
+            86,
+            110
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 85
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 109
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 109
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 109
+            }
+        },
+        "profit": [
+            18.0,
+            0,
+            0
+        ],
+        "common": 68,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            100,
+            51,
+            109
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 50
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 100
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 100
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 100
+            }
+        },
+        "profit": [
+            0,
+            0,
+            9.0
+        ],
+        "common": 43,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            162,
+            74,
+            160
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 73
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 160
+                },
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 160
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 160
+            }
+        },
+        "profit": [
+            2.0,
+            0,
+            0
+        ],
+        "common": 63,
+        "plan": [
+            "",
+            "",
+            ""
+        ]
+    }
+}
