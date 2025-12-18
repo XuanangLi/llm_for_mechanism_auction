@@ -27,7 +27,7 @@ if __name__ == "__main__":
     
     # Rule Option Menu
     seal_clock = 'clock'
-    ascend_descend = 'ascend'  ### ascend / descend
+    ascend_descend = 'descend'  ### ascend / descend
     price_order = 'second'
     private_value = 'affiliated'  ### private value / common value / affiliated value
     open_blind = 'closed'            ### In AC, whether the information is blind or open
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     closing = True
     reserve_price = 60
     
-    output_dir = f"experiment_logs/V10/GPT-4o/clock_ascend_affiliated_closed"
+    output_dir = f"experiment_logs/V10/GPT-4o/clock_descend_affiliated_closed"
     # {seal_clock}_{ascend_descend}_{price_order}_{private_value}_{open_blind}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
