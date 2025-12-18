@@ -44,7 +44,7 @@ pip install edsl
 
 # 3  Configure your OpenAI key
 cat > .env <<'EOF'
-OPENAI_API_KEY=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
+OPENAI_API_KEY= # your openAI key
 EOF
 ```
 
