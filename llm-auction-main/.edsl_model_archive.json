@@ -1,11 +1,11 @@
 {
     "metadata": {
         "title": "Model Information Archive",
-        "description": "This archive contains data about available models. Auto-generated on 2025-12-17T23:06:46.414061.",
-        "created_at": "2025-12-17T23:06:46.414061",
+        "description": "This archive contains data about available models. Auto-generated on 2025-12-18T14:46:43.949007.",
+        "created_at": "2025-12-18T14:46:43.949007",
         "fetcher_name": "coop_working"
     },
-    "created_at": "2025-12-17T23:06:46.414061",
+    "created_at": "2025-12-18T14:46:43.949007",
     "data": {
         "anthropic": [
             {
@@ -474,7 +474,7 @@
                 "raw_data": {
                     "id": "mistral.magistral-small-2509",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 18.8,
                     "usd_per_1M_output_tokens": 75.0
                 },
@@ -606,7 +606,7 @@
                 "raw_data": {
                     "id": "nvidia.nemotron-nano-12b-v2",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 18.8,
                     "usd_per_1M_output_tokens": 75.0
                 },
@@ -671,6 +671,18 @@
                     "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.06,
                     "usd_per_1M_output_tokens": 0.06
+                },
+                "original_class": "dict"
+            },
+            {
+                "service_name": "deep_infra",
+                "id": "MiniMaxAI/MiniMax-M2",
+                "raw_data": {
+                    "id": "MiniMaxAI/MiniMax-M2",
+                    "works_with_text": true,
+                    "works_with_images": false,
+                    "usd_per_1M_input_tokens": 0.8,
+                    "usd_per_1M_output_tokens": 2.4
                 },
                 "original_class": "dict"
             },
@@ -767,18 +779,6 @@
                     "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.3,
                     "usd_per_1M_output_tokens": 1.2
-                },
-                "original_class": "dict"
-            },
-            {
-                "service_name": "deep_infra",
-                "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-                "raw_data": {
-                    "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-                    "works_with_text": true,
-                    "works_with_images": false,
-                    "usd_per_1M_input_tokens": 0.8,
-                    "usd_per_1M_output_tokens": 2.4
                 },
                 "original_class": "dict"
             },
@@ -1064,7 +1064,7 @@
                 "raw_data": {
                     "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.18,
                     "usd_per_1M_output_tokens": 0.6
                 },
@@ -1196,7 +1196,7 @@
                 "raw_data": {
                     "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.8,
                     "usd_per_1M_output_tokens": 2.4
                 },
@@ -1336,6 +1336,18 @@
             },
             {
                 "service_name": "deep_infra",
+                "id": "zai-org/GLM-4.6",
+                "raw_data": {
+                    "id": "zai-org/GLM-4.6",
+                    "works_with_text": true,
+                    "works_with_images": false,
+                    "usd_per_1M_input_tokens": 0.8,
+                    "usd_per_1M_output_tokens": 2.4
+                },
+                "original_class": "dict"
+            },
+            {
+                "service_name": "deep_infra",
                 "id": "zai-org/GLM-4.6V",
                 "raw_data": {
                     "id": "zai-org/GLM-4.6V",
@@ -1452,7 +1464,7 @@
                 "raw_data": {
                     "id": "gemini-2.0-flash-lite-preview",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.08,
                     "usd_per_1M_output_tokens": 0.3
                 },
@@ -1551,6 +1563,18 @@
                     "works_with_images": true,
                     "usd_per_1M_input_tokens": 1.25,
                     "usd_per_1M_output_tokens": 10.0
+                },
+                "original_class": "dict"
+            },
+            {
+                "service_name": "google",
+                "id": "gemini-3-flash-preview",
+                "raw_data": {
+                    "id": "gemini-3-flash-preview",
+                    "works_with_text": true,
+                    "works_with_images": true,
+                    "usd_per_1M_input_tokens": 10.0,
+                    "usd_per_1M_output_tokens": 20.0
                 },
                 "original_class": "dict"
             },
@@ -2670,7 +2694,7 @@
                 "raw_data": {
                     "id": "gpt-4.1-nano",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.1,
                     "usd_per_1M_output_tokens": 0.4
                 },
@@ -2838,7 +2862,7 @@
                 "raw_data": {
                     "id": "gpt-5.2",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 1.25,
                     "usd_per_1M_output_tokens": 10.0
                 },
@@ -3092,7 +3116,7 @@
                 "raw_data": {
                     "id": "gpt-4.1-nano",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.1,
                     "usd_per_1M_output_tokens": 0.4
                 },
@@ -3716,18 +3740,6 @@
             },
             {
                 "service_name": "together",
-                "id": "Salesforce/Llama-Rank-V1",
-                "raw_data": {
-                    "id": "Salesforce/Llama-Rank-V1",
-                    "works_with_text": true,
-                    "works_with_images": false,
-                    "usd_per_1M_input_tokens": 0.1,
-                    "usd_per_1M_output_tokens": 0.1
-                },
-                "original_class": "dict"
-            },
-            {
-                "service_name": "together",
                 "id": "ServiceNow-AI/Apriel-1.5-15b-Thinker",
                 "raw_data": {
                     "id": "ServiceNow-AI/Apriel-1.5-15b-Thinker",
@@ -3924,7 +3936,7 @@
                 "raw_data": {
                     "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 5.0,
                     "usd_per_1M_output_tokens": 5.0
                 },
@@ -4169,6 +4181,30 @@
                     "usd_per_1M_output_tokens": 5.0
                 },
                 "original_class": "dict"
+            },
+            {
+                "service_name": "together",
+                "id": "zai-org/GLM-4.5-Air-FP8",
+                "raw_data": {
+                    "id": "zai-org/GLM-4.5-Air-FP8",
+                    "works_with_text": true,
+                    "works_with_images": false,
+                    "usd_per_1M_input_tokens": 5.0,
+                    "usd_per_1M_output_tokens": 5.0
+                },
+                "original_class": "dict"
+            },
+            {
+                "service_name": "together",
+                "id": "zai-org/GLM-4.6",
+                "raw_data": {
+                    "id": "zai-org/GLM-4.6",
+                    "works_with_text": true,
+                    "works_with_images": false,
+                    "usd_per_1M_input_tokens": 5.0,
+                    "usd_per_1M_output_tokens": 5.0
+                },
+                "original_class": "dict"
             }
         ],
         "xai": [
@@ -4202,7 +4238,7 @@
                 "raw_data": {
                     "id": "grok-4-0709",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 3.0,
                     "usd_per_1M_output_tokens": 15.0
                 },
