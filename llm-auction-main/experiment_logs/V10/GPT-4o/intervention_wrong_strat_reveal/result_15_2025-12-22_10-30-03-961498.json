@@ -1,0 +1,587 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            93,
+            56,
+            5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 46.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 2.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 28.0
+            }
+        },
+        "profit": [
+            65.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **50% of Value**: Start with the dominant strategy of bidding 50% of my value to test its effectiveness against the other bidders.\n\n2. **Aggressive Bidding**: Experiment with bidding slightly above 50% (e.g., 60%) when my value is high to capture wins, while monitoring the outcomes.\n\n3. **Low Bids**: Occasionally bid 40% of my value to see if I can win with a lower bid when others overbid.\n\n4. **Randomized Strategy**: Introduce randomness in bids (between 40-60% of value) to gather data on how unpredictability affects outcomes.\n\n5. **Historical Analysis**: Analyze previous rounds for patterns in opponents' bidding behaviors to adjust my strategy accordingly.",
+            "1. **50% Value Strategy**: Bid 50% of my value consistently to test the dominant strategy's effectiveness.\n  \n2. **Aggressive Bidding**: Occasionally bid 75% of my value to see if winning more often outweighs the cost of higher second-highest bids.\n\n3. **Conservative Bidding**: Test bidding 25% of my value to minimize losses and observe if this leads to more consistent earnings.\n\n4. **Randomized Bidding**: Introduce variability by randomly bidding between 30% and 70% of my value to gather data on opponents' responses.\n\n5. **Historical Analysis**: Track previous rounds to identify patterns in opponents' bidding behavior and adjust strategies accordingly.",
+            "I will implement a mixed bidding strategy over the 15 rounds. Initially, I will bid 50% of my value to test the dominant strategy's effectiveness. In subsequent rounds, I will experiment with aggressive bids (e.g., 60-70% of my value) to capture wins when I have a high value, and conservative bids (e.g., 30-40%) when my value is low to minimize losses. Additionally, I will analyze the bidding patterns of Andy and Betty to adjust my strategy based on their tendencies, aiming to exploit any predictable behavior. This approach will maximize data collection and potential profits."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            92,
+            20,
+            63
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 55.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 10.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 31.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 31.0
+            }
+        },
+        "profit": [
+            61.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Bid 50% of my value as a baseline.  \n2. Test aggressive bids at 60% when values are high.  \n3. Occasionally bid 40% of value to observe opponents' reactions.  \n4. Randomize bids between 40-60% for unpredictability.  \n5. Analyze opponents' bidding patterns for strategic adjustments.",
+            "1. Bid 50% of my value consistently to evaluate the dominant strategy's effectiveness.  \n2. Occasionally bid 75% of my value to test aggressive winning potential.  \n3. Implement conservative bids at 25% to minimize losses.  \n4. Randomize bids between 30% and 70% for variability.  \n5. Analyze opponent patterns to refine strategies.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will then analyze Andy's and Betty's bids. If I have a high value, I\u2019ll bid 60-70%; if low, 30-40%. This mixed strategy will help gather data and maximize profits."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            54,
+            72,
+            21
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 32.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 36.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 10.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 32.0
+            }
+        },
+        "profit": [
+            0,
+            40.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Continue 50% Bids**: Maintain 50% as the baseline strategy for consistency.  \n2. **Aggressive Testing**: Bid 60% when values are high to capture potential wins.  \n3. **Occasional Low Bids**: Experiment with 40% bids to gauge opponent behavior.  \n4. **Randomization**: Randomize bids between 40-60% for unpredictability.  \n5. **Opponent Analysis**: Monitor and analyze bidding patterns for strategic adjustments.",
+            "1. Bid 50% of my value to assess the dominant strategy's performance.  \n2. Experiment with 75% bids to gauge aggressive win potential.  \n3. Implement 25% bids for loss minimization.  \n4. Randomize bids between 30% and 70% for variability.  \n5. Analyze opponents' bidding patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will analyze Andy's and Betty's bidding patterns for adjustments. For high values, I\u2019ll bid 60-70%, and for low values, 30-40%. This mixed strategy will optimize profit potential and data collection."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            35,
+            62,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 21.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 31.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 29.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 29.0
+            }
+        },
+        "profit": [
+            0,
+            33.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Maintain 50% Bids**: Continue using 50% of my value as a baseline.  \n2. **Aggressive Testing**: Bid 60% for high values to increase win chances.  \n3. **Occasional Low Bids**: Experiment with 40% bids to observe opponents.  \n4. **Randomization**: Randomize bids between 40-60% for unpredictability.  \n5. **Behavior Analysis**: Monitor and adapt to opponents' bidding patterns.",
+            "1. Bid 50% of my value consistently to evaluate the dominant strategy's effectiveness.  \n2. Occasionally bid 75% of my value to capture aggressive wins.  \n3. Implement conservative bids at 25% to minimize losses.  \n4. Randomize bids between 30% and 70% for variability.  \n5. Analyze opponents' bidding patterns for strategic insights.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will closely analyze Andy's and Betty's bids for patterns. For high values, I'll experiment with bids of 60-70%, and for low values, I'll use 30-40% to minimize losses and maximize profit potential."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            46,
+            99,
+            35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 23.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 74.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 17.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 23.0
+            }
+        },
+        "profit": [
+            0,
+            76.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Stick to 50%**: Continue bidding 50% of my value for consistency.  \n2. **Aggressive Testing**: Bid 60% for high values.  \n3. **Low Bids**: Occasionally bid 40% to gauge reactions.  \n4. **Randomization**: Introduce randomness between 40-60%.  \n5. **Behavior Monitoring**: Analyze opponents' patterns for strategic adjustments.",
+            "1. Continue bidding 50% of my value to validate the dominant strategy.  \n2. Test 75% bids to assess aggressive win potential.  \n3. Implement 25% bids for loss minimization.  \n4. Randomize bids between 30% and 70% for variability.  \n5. Analyze opponents' bidding patterns for strategic adjustments.",
+            "In round 4, I will bid 50% of my value to test the dominant strategy. I will analyze Andy's and Betty's bids for patterns. For higher values, I\u2019ll bid 60-70%, and for lower values, 30-40%. This approach will enhance data collection and profit maximization."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            83,
+            67,
+            12
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 50.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 33.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 6.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 33.0
+            }
+        },
+        "profit": [
+            50.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Continue 50% Bids**: Stick to bidding 50% of my value for consistency.  \n2. **Aggressive Bids**: Test 60% for high values to increase win chances.  \n3. **Occasional Low Bids**: Experiment with 40% bids to observe opponents' behavior.  \n4. **Randomization**: Introduce randomness between 40-60%.  \n5. **Behavior Monitoring**: Analyze bidding patterns for strategic adjustments.",
+            "1. Bid 50% of my value to confirm the dominant strategy's effectiveness.  \n2. Test 75% bids for aggressive wins in higher-value rounds.  \n3. Implement 25% bids to minimize losses in uncertain scenarios.  \n4. Randomize bids between 30% and 70% for variability.  \n5. Continue analyzing opponents' bidding patterns for strategic insights.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will analyze Andy's and Betty's bids for patterns. For high values, I\u2019ll bid 60-70%, and for low values, I\u2019ll use 30-40% to optimize profit potential and minimize losses."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            43,
+            29,
+            53
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 21.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 14.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 26.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 21.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            32.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Bid**: Continue bidding 50% of my value for consistency.\n2. **Aggressive Strategy**: Bid 60% when my value is above 70 to capture wins.\n3. **Low Experimentation**: Occasionally bid 40% to test opponents' behaviors.\n4. **Randomization**: Introduce bids between 40-60% for unpredictability.\n5. **Pattern Analysis**: Monitor and adapt to opponents\u2019 bidding strategies.",
+            "1. **Bid 50% of my value** to validate the dominant strategy's effectiveness.\n2. **Increase aggressive bids to 80%** of my value to capture more wins.\n3. **Maintain conservative bids at 25%** for loss minimization in lower-value rounds.\n4. **Randomize bids between 40% and 70%** for variability and data collection.\n5. **Continue analyzing opponents' bidding behavior** for strategic adjustments.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will analyze Andy's and Betty's bidding patterns closely. If my value is high, I\u2019ll bid 60-70%; if low, 30-40% to optimize profit potential and minimize losses effectively."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            98,
+            67,
+            82
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 59.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 34.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 41.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 41.0
+            }
+        },
+        "profit": [
+            57.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Bid**: Continue bidding 50% of my value for consistency.  \n2. **Aggressive Strategy**: Raise bids to 60% for high values to secure wins.  \n3. **Low Experimentation**: Occasionally bid 40% to test opponents' reactions.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Pattern Analysis**: Monitor opponents' strategies for adjustments.",
+            "1. Bid 50% of my value to assess the dominant strategy's effectiveness.\n2. Increase aggressive bids to 80% of my value for potential wins.\n3. Implement conservative bids at 25% to minimize losses.\n4. Randomize bids between 40% and 70% for variability.\n5. Analyze opponents\u2019 bidding patterns for strategic insights.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. I will analyze Andy's and Betty's bidding patterns for adjustments. For high values, I\u2019ll bid 60-70%, and for low values, 30-40% to optimize profit potential and minimize losses effectively."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            90,
+            55,
+            97
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 54.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 44.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 48.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 48.0
+            }
+        },
+        "profit": [
+            42.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Maintain 50% Bids**: Continue as a baseline for consistency.  \n2. **Aggressive Bidding**: Test 60% for high-value rounds.  \n3. **Occasional Low Bids**: Bid 40% to observe competitors' reactions.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Analyze Patterns**: Adjust based on opponents' bidding behavior.",
+            "1. Bid 50% of my value consistently to evaluate the dominant strategy.\n2. Increase aggressive bids to 80% of my value to capture wins.\n3. Implement conservative bids at 25% for loss minimization.\n4. Randomize bids between 40% and 70% for variability.\n5. Analyze opponent bidding patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value to test the dominant strategy. For higher values, I\u2019ll increase bids to 60-70% to capture wins. For lower values, I\u2019ll decrease bids to 30-40% to minimize losses. I will closely monitor Andy's and Betty's bidding patterns for adjustments."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            59,
+            18,
+            42
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 35.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 11.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 21.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 21.0
+            }
+        },
+        "profit": [
+            38.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Strategy**: Maintain 50% of value for consistency.  \n2. **Aggressive Bidding**: Test 60% for high-value rounds to capture wins.  \n3. **Low Bids**: Occasionally bid 40% to gauge opponents' reactions.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Behavior Analysis**: Adapt based on observed bidding patterns.",
+            "1. Bid 60% of my value to increase win probability while managing costs.\n2. Occasionally test 75% bids for aggressive wins.\n3. Continue conservative bids at 25% for loss minimization.\n4. Randomize bids between 40% and 70% for data collection.\n5. Analyze opponent patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value again for consistency. If my value is high, I'll test bids of 60-70% to capture wins. For low values, I'll reduce bids to 30-40%. I will analyze Andy's and Betty's patterns for strategic adjustments."
+        ]
+    },
+    "round_10": {
+        "round": 10,
+        "value": [
+            47,
+            57,
+            8
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 34.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 4.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 28.0
+            }
+        },
+        "profit": [
+            0,
+            29.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Bid**: Continue bidding 50% of my value for consistency.  \n2. **Aggressive Testing**: Bid 60% when values are high to secure wins.  \n3. **Low Bids**: Occasionally bid 40% to observe competitors.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Behavior Analysis**: Adapt based on observed bidding patterns.",
+            "1. Bid 60% of my value to increase win probability while managing costs.  \n2. Test 75% bids selectively for aggressive wins.  \n3. Maintain conservative bids at 25% for loss minimization.  \n4. Randomize bids between 40% and 70% for data collection.  \n5. Continue analyzing opponents' bidding patterns for adjustments.",
+            "In the next round, I will bid 50% of my value to maintain consistency. For high values, I will experiment with bids of 60-70% to increase win potential. For low values, I will bid 30-40% to minimize losses. I will analyze Andy's and Betty's bidding patterns for strategic adjustments."
+        ]
+    },
+    "round_11": {
+        "round": 11,
+        "value": [
+            66,
+            86,
+            99
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 40.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 52.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 49.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 49.0
+            }
+        },
+        "profit": [
+            0,
+            37.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Bid 50% of Value**: Maintain as baseline for consistency.  \n2. **Aggressive Bidding**: Increase to 60% for high values to capture wins.  \n3. **Experiment Low Bids**: Occasionally bid 40% to assess competitors' reactions.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Behavior Monitoring**: Analyze opponents' patterns for strategic adjustments.",
+            "1. Bid 60% of my value to enhance win chances while controlling costs.\n2. Occasionally test 75% bids for aggressive wins.\n3. Maintain 25% bids for loss minimization in low-value scenarios.\n4. Randomize bids between 40% and 70% for variability.\n5. Analyze opponents' patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value to maintain consistency. If my value is high, I'll test bids of 60-70% to increase win potential. For low values, I'll bid 30-40% to minimize losses. I'll analyze Andy's and Betty's patterns for strategic adjustments."
+        ]
+    },
+    "round_12": {
+        "round": 12,
+        "value": [
+            11,
+            97,
+            54
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 5.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 58.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 27.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 27.0
+            }
+        },
+        "profit": [
+            0,
+            70.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Bid 50%**: Continue as a baseline to ensure competitiveness.  \n2. **Aggressive Bids**: Increase to 60% for high values to secure wins.  \n3. **Experiment Low Bids**: Occasionally bid 40% to observe reactions.  \n4. **Randomization**: Introduce variability between 40-60% for unpredictability.  \n5. **Behavior Analysis**: Adjust based on opponents' bidding patterns.",
+            "1. Bid 60% of my value to balance win probability and costs.  \n2. Test 75% bids selectively for aggressive wins.  \n3. Maintain 25% bids for loss minimization in low-value scenarios.  \n4. Randomize bids between 40% and 70% for variability.  \n5. Continue analyzing opponents' bidding patterns for adjustments.",
+            "In the next round, I will bid 50% of my value for consistency. For high values, I'll test bids of 60-70% to increase win potential. For low values, I'll reduce bids to 30-40% to minimize losses. I'll closely analyze Andy's and Betty's bidding patterns for strategic adjustments."
+        ]
+    },
+    "round_13": {
+        "round": 13,
+        "value": [
+            52,
+            69,
+            98
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 31.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 41.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 60.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 41.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            57.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Bid**: Continue bidding 50% of my value for consistency.  \n2. **Aggressive Testing**: Increase to 60% for high values to secure wins.  \n3. **Low Bid Experimentation**: Occasionally bid 40% to gauge opponent reactions.  \n4. **Randomization**: Introduce variability between 40-60%.  \n5. **Behavior Analysis**: Monitor and adapt to opponents' bidding patterns.",
+            "1. Bid 60% of my value to balance win probability and costs.  \n2. Occasionally test 75% bids for aggressive wins, especially in higher-value rounds.  \n3. Implement 25% bids in lower-value scenarios for loss minimization.  \n4. Randomize bids between 40% and 70% to gather data on opponents.  \n5. Analyze bidding patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value for consistency. If my value is high, I\u2019ll increase my bid to 60-70% to capture wins. For low values, I\u2019ll decrease bids to 30-40% to minimize losses. I will analyze Andy's and Betty's bidding patterns for adjustments."
+        ]
+    },
+    "round_14": {
+        "round": 14,
+        "value": [
+            45,
+            93,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 22.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 56.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 29.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 29.0
+            }
+        },
+        "profit": [
+            0,
+            64.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Baseline Bid**: Continue bidding 50% of my value for consistency.\n2. **Aggressive Strategy**: Bid 60% for high values to secure wins.\n3. **Low Bid Testing**: Experiment with 30-40% bids to observe competitors' reactions.\n4. **Randomization**: Introduce variability within 30-60% for unpredictability.\n5. **Pattern Monitoring**: Analyze opponents\u2019 bids for strategic adjustments.",
+            "1. Bid 60% of my value to balance win probability and costs.\n2. Test 75% bids selectively in high-value rounds for aggressive wins.\n3. Implement 25% bids in lower-value scenarios for loss minimization.\n4. Randomize bids between 40% and 70% for data gathering.\n5. Analyze opponent patterns for strategic adjustments.",
+            "In the next round, I will bid 50% of my value for consistency. For higher values, I will bid 60-70% to increase win potential, while for lower values, I will reduce bids to 30-40% to minimize losses. I will closely analyze Andy's and Betty's bidding patterns for strategic adjustments."
+        ]
+    }
+}

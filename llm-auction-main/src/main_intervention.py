@@ -1,4 +1,4 @@
-from edsl.data import Cache
+from edsl.caching import Cache
 import logging
 import os
 import pandas as pd
@@ -15,9 +15,9 @@ def run_auction(i, human, number_agents, rule, output_dir, c):
         ...
         # a = Auction_human(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=1)
     elif ebay:
-        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=0.5)
+        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
     else:
-        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=0.5)
+        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
     a.draw_value(seed=1399 + i)
     a.run_repeated()
     c.write_jsonl(os.path.join(output_dir, f"raw_output__{timestring}.jsonl"))
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     turns = 20
 
     
-    output_dir = f"experiment_logs/V10/intervention_wrong_strat_reveal"
+    output_dir = f"experiment_logs/V10/GPT-4o/intervention_wrong_strat_reveal"
     # output_dir = os.path.join("experiment_logs/V10" ,f"{seal_clock}_{ascend_descend}_{price_order}_{private_value}_{open_blind}")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         special_name="intervention_wrong_strat_reveal.txt",)
     rule.describe()
 
-    N = 5 # Repeat for N times
+    N = 3 # Repeat for N times
 
     for i in range(N):
         run_auction( i, human, number_agents, rule, output_dir, c)

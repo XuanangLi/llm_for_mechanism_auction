@@ -1,4 +1,4 @@
-from edsl.data import Cache
+from edsl.caching import Cache
 import logging
 import os
 import pandas as pd
@@ -15,9 +15,9 @@ def run_auction(i, human, number_agents, rule, output_dir, c):
         ...
         # a = Auction_human(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=1)
     elif ebay:
-        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=0.5)
+        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
     else:
-        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=0.5)
+        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
     a.draw_value(seed=1398 + i)
     a.run_repeated()
     c.write_jsonl(os.path.join(output_dir, f"raw_output__{timestring}.jsonl"))
@@ -37,9 +37,9 @@ if __name__ == "__main__":
     round = 1
     turns = 10
     closing = True
-    reserve_price = 60
+    reserve_price = 0
     
-    output_dir = f"experiment_logs/V10/ebay_closing_rule_with_hidden_reserve_60"
+    output_dir = f"experiment_logs/V10/GPT-4o/ebay_closing_rule_with_hidden_reserve_0"
     # {seal_clock}_{ascend_descend}_{price_order}_{private_value}_{open_blind}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -49,12 +49,12 @@ if __name__ == "__main__":
         private_value=private_value, open_blind=open_blind, 
         rounds=round, turns=turns , common_range=[0, 79], private_range=99, increment=1, 
         number_agents=number_agents,
-        special_name="ebay_t4_closing_rule_with_hidden_reserve.txt",#"ebay_t2_closing_rule.txt",
+        special_name="ebay_t2_closing_rule.txt", 
         closing = closing,
         reserve_price = reserve_price)
     rule.describe()
 
-    N = 20 # Repeat for N times
+    N = 3 # Repeat for N times
 
     
     with concurrent.futures.ThreadPoolExecutor() as executor:
