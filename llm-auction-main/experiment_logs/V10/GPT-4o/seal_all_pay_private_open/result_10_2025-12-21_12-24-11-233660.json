@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            79,
+            83,
+            2
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 79.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 90.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 1.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 90.0
+            }
+        },
+        "profit": [
+            -79.0,
+            -7.0,
+            -1.0
+        ],
+        "common": 0,
+        "plan": [
+            "In the upcoming rounds, I will implement a mix of bidding strategies:\n\n1. **Value-Based Bidding**: Bid slightly below my drawn value (e.g., 90% of my value) to optimize profit while remaining competitive.\n   \n2. **Aggressive Bidding**: Occasionally bid close to $99 to test opponents' reactions and gather data on their bidding behavior.\n\n3. **Randomized Bidding**: Introduce randomness in bids (e.g., bid between 70% and 90% of my value) to explore opponent strategies and identify patterns.\n\n4. **Observe and Adapt**: Analyze previous rounds for opponents' bidding tendencies and adjust my strategy accordingly to maximize profit.",
+            "1. **Aggressive Bidding**: Start with bids close to the maximum value (e.g., $90-$99) to test if winning with high bids generates better profits despite the risk of losses.\n\n2. **Underbidding**: Experiment with lower bids (e.g., $1-$20) to see if winning with minimal cost can yield profit, especially if opponents bid high.\n\n3. **Randomized Bids**: Implement a strategy that randomly selects bids across the range to gather data on opponents' bidding patterns.\n\n4. **Value-Based Bidding**: Bid slightly below my drawn value (e.g., 90% of my value) to balance winning chances and profit margins.\n\n5. **Adaptive Strategy**: Adjust bids based on previous rounds' outcomes to refine approach continuously.",
+            "In the upcoming rounds, I will test a mix of conservative and aggressive bidding strategies. Initially, I will bid slightly below my value (e.g., 90% of my value) to maximize profit while remaining competitive. In subsequent rounds, I will experiment with higher bids (e.g., 95% of my value) to gauge opponents' responses and potentially capture wins. I will also implement a random bid strategy on a few rounds to gather data on opponents' bidding behavior. Additionally, I will track the correlation between my value and winning bids to refine my approach in later rounds."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            64,
+            5,
+            45
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 78.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 5.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 41.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 78.0
+            }
+        },
+        "profit": [
+            -14.0,
+            -5.0,
+            -41.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Bid 78, slightly below my value for a balanced approach.  \n2. Test aggressive bidding by placing a bid of 95 to gauge opponents' reactions.  \n3. Randomize bids between 70-79 to explore strategies.  \n4. Observe and analyze opponents\u2019 bids for patterns to refine future strategies.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to balance winning chances and profit margins.  \n2. **Underbidding**: Experiment with bids around $20-$30 to capture wins against high bids.  \n3. **Aggressive Bidding**: Occasionally bid near $99 to test opponents' thresholds.  \n4. **Data Analysis**: Continuously adapt bids based on previous round outcomes.",
+            "In the next round, I will bid 90% of my value to remain competitive while minimizing losses. I will also test a 95% bid in one round to assess opponents' reactions. Additionally, I\u2019ll implement a random bid strategy in another round to gather insights on bidding patterns."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            98,
+            74,
+            7
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 88.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 66.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 6.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 88.0
+            }
+        },
+        "profit": [
+            10.0,
+            -66.0,
+            -6.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Bid 90% of my value to balance competitiveness and risk.  \n2. Test aggressive bidding with a $99 bid to gather data on opponents.  \n3. Randomize bids between 70-80% of my value for exploration.  \n4. Analyze opponents' past bids for adaptive strategy refinement.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to balance winning chances and profit margins.  \n2. **Underbidding**: Experiment with bids around $1-$10 when values are low to minimize losses.  \n3. **Aggressive Bidding**: Occasionally bid near $90 to test opponents' thresholds.  \n4. **Data Analysis**: Adapt bids based on previous outcomes.",
+            "In the next round, I will bid 90% of my value to balance competitiveness and risk. I will also test a 95% bid in one round to observe opponents' responses. Additionally, I will implement a random bid strategy in another round to analyze bidding patterns and refine my approach."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            33,
+            63,
+            32
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 57.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 29.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 57.0
+            }
+        },
+        "profit": [
+            -30.0,
+            6.0,
+            -29.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Bid 90% of my value for a balanced approach.  \n2. Experiment with a $99 bid to test opponents' limits.  \n3. Randomize bids between 70-80% of my value for exploration.  \n4. Analyze previous bids to refine strategies and adapt to opponents' tendencies.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to optimize win potential and profit.  \n2. **Underbidding**: Experiment with low bids ($1-$10) when values are low to minimize losses.  \n3. **Aggressive Bidding**: Occasionally bid near $90 to gauge opponents' limits.  \n4. **Data Analysis**: Continuously refine strategy based on outcomes.",
+            "In the next round, I will bid 90% of my value to remain competitive. I will also test a 95% bid to gauge opponents' reactions. Additionally, I will implement a random bid (between 1 and 99) in one round to analyze bidding patterns and refine my strategy further."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            31,
+            74,
+            86
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 77.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 77.0
+            }
+        },
+        "profit": [
+            -28.0,
+            -67.0,
+            9.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid around 90% of my value for competitiveness.  \n2. **Aggressive Testing**: Occasionally bid $99 to assess opponents' limits.  \n3. **Randomization**: Introduce bids between 70-80% of my value for exploration.  \n4. **Adaptive Analysis**: Continuously analyze opponents' bids to refine future strategies.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to optimize win potential.  \n2. **Aggressive Bidding**: Test bids near $90 occasionally to find opponents' limits.  \n3. **Underbidding**: Use low bids ($1-$10) for low values to minimize losses.  \n4. **Data Analysis**: Continuously adapt based on previous outcomes.",
+            "In the next round, I will bid 90% of my value for competitiveness. I will also experiment with a 95% bid to assess opponents' reactions. Additionally, I will implement a random bid strategy between 1 and 99 in a future round to gather insights on bidding behavior."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            6,
+            15,
+            80
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 5.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 13.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 72.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 72.0
+            }
+        },
+        "profit": [
+            -5.0,
+            -13.0,
+            8.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid 90% of my value for competitiveness.  \n2. **Aggressive Testing**: Occasionally bid $99 to assess opponents' limits.  \n3. **Randomization**: Introduce bids between 70-80% of my value for exploration.  \n4. **Adaptive Analysis**: Continuously analyze opponents' bids to refine future strategies.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to balance winning chances and profit.  \n2. **Aggressive Bidding**: Occasionally bid near $90 to test opponents' limits.  \n3. **Underbidding**: Use bids around $1-$10 for low values to minimize losses.  \n4. **Adaptive Strategy**: Continuously refine based on previous outcomes.",
+            "In the next round, I will bid 90% of my value to remain competitive. I will also test a 95% bid to gauge opponents' reactions. Additionally, I will implement a random bid strategy between 1 and 99 in a future round to analyze bidding patterns and refine my approach."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            20,
+            3,
+            24
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 18.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 3.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 22.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 22.0
+            }
+        },
+        "profit": [
+            -18.0,
+            -3.0,
+            2.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid 90% of my value to remain competitive.\n2. **Low Bid Experimentation**: Occasionally bid slightly below my value (1-4) to minimize losses.\n3. **Aggressive Testing**: Test bids near $99 for data on opponents.\n4. **Randomization**: Random bids between 70-80% of my value for exploration.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to optimize chances.  \n2. **Aggressive Bidding**: Occasionally bid near $90 to test opponents' limits.  \n3. **Underbidding**: Use low bids for low values ($1-$10) to minimize losses.  \n4. **Adaptive Strategy**: Adjust bids based on previous outcomes to refine approach.",
+            "In the next round, I will bid 90% of my value for competitiveness. Additionally, I will test a 95% bid to observe opponents' reactions. I will implement a random bid strategy between 1 and 99 in a future round to gather insights on bidding behavior and refine my approach."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            74,
+            27,
+            68
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 24.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 61.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 67.0
+            }
+        },
+        "profit": [
+            7.0,
+            -24.0,
+            -61.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid around 90% of my value for competitiveness.\n2. **Aggressive Testing**: Occasionally bid $99 to gauge opponents' limits.\n3. **Low Bid Experimentation**: Test bids slightly below my value (1-4).\n4. **Randomization**: Introduce bids between 70-80% of my value to explore strategies.",
+            "1. **Value-Based Bidding**: Continue bidding at 90% of my drawn value to optimize win potential.  \n2. **Underbidding**: Experiment with bids around $1-$5 for low values to minimize losses.  \n3. **Aggressive Bidding**: Occasionally bid around $90 to test opponents' limits.  \n4. **Data Analysis**: Refine strategies based on outcomes.",
+            "In the next round, I will bid 90% of my value for competitiveness and test a 95% bid to assess opponents' reactions. I will also implement a random bid strategy between 1 and 99 in a future round to gather insights on bidding behavior and refine my strategy further."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            53,
+            43,
+            64
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 48.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 39.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 57.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 57.0
+            }
+        },
+        "profit": [
+            -48.0,
+            -39.0,
+            7.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid 90% of my value for competitiveness.\n2. **Aggressive Testing**: Occasionally bid $99 to assess opponents' limits.\n3. **Low Bid Experimentation**: Test bids slightly below my value (1-3).\n4. **Randomization**: Random bids between 70-80% of my value to explore strategies and gather data.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to optimize win potential.  \n2. **Underbidding**: Test lower bids ($1-$10) for low values to minimize losses.  \n3. **Aggressive Bidding**: Occasionally bid around $90 to gauge opponents' thresholds.  \n4. **Adaptive Strategy**: Continuously refine bids based on previous outcomes.",
+            "In the next round, I will bid 90% of my value to balance competitiveness and minimize losses. I will also test a 95% bid to gauge opponents' reactions. Additionally, I will implement a random bid strategy between 1 and 99 to analyze bidding patterns for future refinement."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            81,
+            20,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 73.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 18.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 52.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 73.0
+            }
+        },
+        "profit": [
+            8.0,
+            -18.0,
+            -52.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. **Value-Based Bidding**: Bid 90% of my value for competitiveness.\n2. **Aggressive Testing**: Occasionally bid $99 to assess opponents' limits.\n3. **Low Bid Experimentation**: Test bids slightly below my value (1-3).\n4. **Randomization**: Introduce bids between 70-80% of my value to explore strategies and gather data.",
+            "1. **Value-Based Bidding**: Bid 90% of my drawn value to balance win potential and profit.  \n2. **Aggressive Bidding**: Occasionally bid near $90 to test opponents' limits.  \n3. **Underbidding**: Experiment with bids around $1-$10 for low values to minimize losses.  \n4. **Adaptive Strategy**: Refine bids based on previous outcomes.",
+            "In the next round, I will bid 90% of my value to remain competitive while minimizing losses. I will also experiment with a 95% bid to assess opponents' reactions. Additionally, I will implement a random bid strategy between 1 and 99 to analyze bidding patterns for future refinement."
+        ]
+    }
+}

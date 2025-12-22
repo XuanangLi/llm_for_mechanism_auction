@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            142,
+            61,
+            123
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 140.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 62.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 86.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 140.0
+            }
+        },
+        "profit": [
+            2.0,
+            0,
+            0
+        ],
+        "common": 59,
+        "plan": [
+            "1. **Aggressive Bidding**: Start with bids close to my perceived value to test competitors' thresholds. This may reveal their bidding behavior and risk appetite.\n\n2. **Conservative Bidding**: Begin with lower bids to gauge the auction dynamics and see how high competitors are willing to go before I engage more.\n\n3. **Incremental Bidding**: Increase bids in small increments to avoid overcommitting while still testing the waters.\n\n4. **Randomized Strategy**: Occasionally bid randomly to gather data on competitors' reactions and potential psychological thresholds.\n\n5. **Data Analysis**: After each round, analyze bid patterns and adjust future strategies based on observed behaviors and outcomes.",
+            "1. **Aggressive Bidding**: Start with a higher initial bid to gauge opponents' thresholds, especially if my value seems high.\n  \n2. **Conservative Bidding**: Begin with low bids to save resources if my value seems low, encouraging others to drop out.\n\n3. **Incremental Bidding**: Gradually increase bids to avoid detection of my value while assessing opponents' reactions.\n\n4. **Randomized Bidding**: Occasionally place random bids to confuse opponents and gather data on their bidding patterns.\n\n5. **Value Assessment**: After each round, analyze the winning bids to refine my understanding of common values and adjust my strategy accordingly.",
+            "1. **Aggressive Bidding**: Start with a high initial bid (e.g., 70% of my value) to gauge competitors' reactions and test their risk tolerance.\n\n2. **Conservative Bidding**: Begin with low incremental bids to preserve funds while observing opponents' bidding patterns.\n\n3. **Randomized Bidding**: Implement a strategy of random bids within a calculated range to gather data on opponents' thresholds.\n\n4. **Incremental Increases**: Gradually increase bids based on observed competitor behavior, adapting to their strategies.\n\n5. **Drop-out Strategy**: If my value is low relative to perceived competition, exit early to minimize losses and gather insights for future rounds."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            67,
+            120,
+            96
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 85.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 76.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 85.0
+            }
+        },
+        "profit": [
+            0,
+            35.0,
+            0
+        ],
+        "common": 22,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids at or near perceived value to test competitors' limits.\n2. **Incremental Bidding**: Gradually increase bids in small increments to gauge reactions.\n3. **Data Analysis**: Analyze competitors' bids post-round to refine strategies.\n4. **Randomized Strategy**: Occasionally bid randomly to observe psychological thresholds.",
+            "1. **Aggressive Start**: Bid 85 to test opponents' limits and gauge their values.\n2. **Incremental Adjustments**: Increase bids by 5 if opponents remain active, assessing their reactions.\n3. **Random Bids**: Occasionally place random bids between 70-90 to confuse and gather data.\n4. **Post-Round Analysis**: Refine strategy based on winning bids and profit margins.",
+            "1. **Aggressive Bidding**: Start at 80% of my value to test competition.\n2. **Incremental Increases**: Bid in small increments of 5-10 USD based on opponents' bids.\n3. **Drop-out Strategy**: Exit if bids exceed 90% of my value to minimize losses.\n4. **Randomized Bidding**: Occasionally place random bids to gather insights."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            81,
+            107,
+            137
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 75.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 90.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 109.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 109.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            28.0
+        ],
+        "common": 74,
+        "plan": [
+            "1. **Aggressive Bidding**: Start near perceived value to gauge competitors' limits.\n2. **Incremental Bidding**: Gradually increase bids by 5-10 to test auction dynamics.\n3. **Randomized Strategy**: Occasionally bid randomly to observe competitor reactions.\n4. **Data Analysis**: Post-round review to refine future bidding strategies based on observed behaviors.",
+            "1. **Aggressive Opening**: Start at 90 to challenge opponents and gauge their limits.\n2. **Incremental Bidding**: Increase bids by 5 if competition persists.\n3. **Randomized Bids**: Occasionally bid between 70-100 for data collection.\n4. **Post-Round Review**: Analyze winning bids to refine future strategies.",
+            "1. **Aggressive Bidding**: Start at 80% of my value to test competition.\n2. **Incremental Bids**: Increase bids by 5-10 USD based on competitors' actions.\n3. **Drop-out Strategy**: Exit if bids exceed 90% of my value.\n4. **Randomized Bids**: Occasionally place random bids to gather insights on opponents."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            67,
+            110,
+            122
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 90.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 103.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 103.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            19.0
+        ],
+        "common": 36,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids at or near perceived value to test competitors.  \n2. **Incremental Bidding**: Increase bids by 5-10 to gauge auction dynamics.  \n3. **Randomized Strategy**: Occasionally bid randomly for data on competitor thresholds.  \n4. **Data Analysis**: Review bid patterns post-round to refine strategies.",
+            "1. **Aggressive Bidding**: Start at 90 to test limits.\n2. **Incremental Increases**: Raise bids by 5 if competition continues.\n3. **Randomized Bids**: Occasionally bid between 70-100 for insights.\n4. **Post-Round Analysis**: Review winning bids to adjust strategies for future rounds.",
+            "1. **Aggressive Bidding**: Start at 85% of my value to test limits.\n2. **Incremental Bids**: Increase by 5-10 USD based on competitors' bids.\n3. **Drop-out Strategy**: Exit if bids exceed 95% of my value.\n4. **Randomized Bids**: Occasionally bid randomly to gauge opponents' thresholds."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            38,
+            103,
+            43
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 38.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 36.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 100.0
+            }
+        },
+        "profit": [
+            0,
+            3.0,
+            0
+        ],
+        "common": 23,
+        "plan": [
+            "1. **Aggressive Bidding**: Start near perceived value to test limits.\n2. **Incremental Bidding**: Increase bids by 5-10 to gauge competitor reactions.\n3. **Randomized Strategy**: Occasionally bid randomly to gather data.\n4. **Conservative Exit**: Consider leaving earlier if bids exceed perceived value significantly.",
+            "1. **Aggressive Opening**: Start at 100 to challenge opponents.\n2. **Incremental Increases**: Raise bids by 5 if competition persists.\n3. **Randomized Bids**: Occasionally bid between 85-110 to gather data.\n4. **Post-Round Analysis**: Assess winning bids to refine strategies for future rounds.",
+            "1. **Aggressive Bidding**: Start at 85% of my value to gauge competition.  \n2. **Incremental Increases**: Raise bids by 5-10 USD based on others' actions.  \n3. **Drop-out Strategy**: Exit if bids exceed 95% of my value.  \n4. **Randomized Bids**: Occasionally place random bids for data insights."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            45,
+            95,
+            48
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 45.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 41.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 100.0
+            }
+        },
+        "profit": [
+            0,
+            -5.0,
+            0
+        ],
+        "common": 21,
+        "plan": [
+            "1. **Aggressive Bidding**: Start near my value to test competitors' limits.\n2. **Incremental Bidding**: Increase bids in small increments (5-10) to gauge reactions.\n3. **Conservative Exit**: Leave if bids exceed my value significantly.\n4. **Data Analysis**: Review bid patterns to refine strategies after each round.",
+            "1. **Aggressive Start**: Begin at 100 to challenge opponents.\n2. **Incremental Bidding**: Increase by 5 if competition persists.\n3. **Randomized Bids**: Occasionally bid between 85-110 for data insights.\n4. **Post-Round Analysis**: Evaluate winning bids to refine future strategies and adjust based on opponents' behaviors.",
+            "1. **Aggressive Bidding**: Start at 85% of my value to test competition limits.  \n2. **Incremental Increases**: Raise bids in 5-10 USD increments based on competitors.  \n3. **Drop-out Strategy**: Exit early if bids exceed 95% of my value.  \n4. **Randomized Bids**: Occasionally place random bids for insights."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            143,
+            128,
+            118
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 144.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 95.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 100.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 144.0
+            }
+        },
+        "profit": [
+            -1.0,
+            0,
+            0
+        ],
+        "common": 75,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids slightly above perceived value to increase winning chances.\n2. **Incremental Bidding**: Use small increments (1-5) to test competitors' reactions.\n3. **Conservative Exit**: Withdraw if bids exceed my value significantly.\n4. **Data Analysis**: Continuously evaluate competitors' patterns for strategic adjustments.",
+            "1. **Conservative Bidding**: Start at 95 to balance competitiveness and minimize losses.\n2. **Incremental Adjustments**: Increase bids by 5 if competition continues.\n3. **Randomized Bids**: Occasionally bid between 80-100 for data insights.\n4. **Post-Round Analysis**: Evaluate winning bids to refine future strategies.",
+            "1. **Aggressive Bidding**: Start at 85% of my value to test competition.\n2. **Incremental Increases**: Raise bids by 5-10 USD based on competitors' actions.\n3. **Drop-out Strategy**: Exit if bids exceed 90% of my value.\n4. **Randomized Bids**: Occasionally place random bids for insights."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            133,
+            72,
+            110
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 133.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 72.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 133.0
+            }
+        },
+        "profit": [
+            0.0,
+            0,
+            0
+        ],
+        "common": 52,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids near perceived value to test competitor limits.  \n2. **Incremental Bidding**: Increase bids by 1-5 to gauge reactions.  \n3. **Conservative Exit**: Withdraw if bids exceed my value significantly.  \n4. **Data Analysis**: Review outcomes to refine bidding strategies continuously.",
+            "1. **Aggressive Bidding**: Start with bids closer to my value to maximize win potential.\n2. **Incremental Increases**: Raise bids by 5 if competition persists.\n3. **Data Collection**: Occasionally place random bids between 80-130 to assess opponents' thresholds.\n4. **Post-Round Analysis**: Refine strategies based on winning bids and profits.",
+            "1. **Aggressive Bidding**: Start at 90% of my value to assert dominance.  \n2. **Incremental Increases**: Raise bids by 5-10 USD based on competitors' actions.  \n3. **Drop-out Strategy**: Exit if bids exceed 95% of my value.  \n4. **Randomized Bids**: Occasionally place random bids to gather data."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            68,
+            130,
+            70
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 68.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 63.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 100.0
+            }
+        },
+        "profit": [
+            0,
+            30.0,
+            0
+        ],
+        "common": 47,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids at or slightly above perceived value to test competitors' limits.\n2. **Incremental Bidding**: Use small increments (1-5) to gauge reactions.\n3. **Conservative Exit**: Withdraw if bids exceed my value significantly.\n4. **Data Analysis**: Continuously evaluate bid patterns for strategic adjustments.",
+            "1. **Aggressive Bidding**: Start at 100 to challenge opponents.\n2. **Incremental Increases**: Raise bids by 5 if competition continues.\n3. **Randomized Bids**: Occasionally bid between 80-130 for insights.\n4. **Data-Driven Adjustments**: Analyze previous winning bids to refine future strategies and assess opponents' limits.",
+            "1. **Aggressive Bidding**: Start at 90% of my value to assert competitiveness.  \n2. **Incremental Increases**: Raise bids in 5-10 USD increments based on opponents' bids.  \n3. **Drop-out Strategy**: Exit if bids exceed 95% of my value.  \n4. **Randomized Bids**: Occasionally place random bids for insights."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            154,
+            94,
+            148
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 155.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 126.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 155.0
+            }
+        },
+        "profit": [
+            -1.0,
+            0,
+            0
+        ],
+        "common": 74,
+        "plan": [
+            "1. **Aggressive Bidding**: Start bids slightly above perceived value to compete effectively.\n2. **Incremental Bidding**: Increase bids in small increments (1-3) to test competitor reactions.\n3. **Conservative Exit**: Withdraw if bids exceed my value by a significant margin.\n4. **Data Analysis**: Continuously analyze bid patterns to refine strategies.",
+            "1. **Aggressive Start**: Bid 100 to challenge opponents and gauge reactions.\n2. **Incremental Increases**: Raise bids by 5 if competition continues.\n3. **Data-Driven Adjustments**: Analyze previous bids to refine strategies.\n4. **Random Bids**: Occasionally place bids between 80-130 for insights into opponents' thresholds.",
+            "1. **Aggressive Bidding**: Start at 85% of my value to test limits.\n2. **Incremental Bids**: Increase by 5-10 USD based on competitors' actions.\n3. **Drop-out Strategy**: Exit if bids exceed 90% of my value.\n4. **Data Gathering**: Randomly bid to learn about opponents' thresholds."
+        ]
+    }
+}

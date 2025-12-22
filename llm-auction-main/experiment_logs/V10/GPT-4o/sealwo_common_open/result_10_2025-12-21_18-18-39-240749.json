@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            126,
+            -35,
+            89
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 125.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 34.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 88.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 88.0
+            }
+        },
+        "profit": [
+            -29.0,
+            0,
+            0
+        ],
+        "common": 59,
+        "plan": [
+            "In the upcoming rounds, I'll test a mix of bidding strategies. First, I\u2019ll adopt a conservative approach by bidding slightly below my perceived value to minimize losses while ensuring a chance to win. Next, I\u2019ll experiment with aggressive bids, placing bids above perceived value to capture potential wins against cautious competitors. Additionally, I'll analyze previous rounds to identify patterns in Bidder Betty and Bidder Charles\u2019s bidding behaviors and adjust accordingly. Finally, I\u2019ll implement a random bid strategy occasionally to gather data on their reactions and refine my understanding of optimal bidding thresholds.",
+            "1. **Aggressive Bidding**: In rounds 1-3, bid slightly above perceived value to test opponents' thresholds, aiming for wins despite potentially high second-highest bids.\n\n2. **Conservative Bidding**: In rounds 4-6, bid below perceived value to gather data on competitors\u2019 bidding behavior and adjust strategies accordingly.\n\n3. **Randomized Bidding**: In rounds 7-10, implement a mix of aggressive and conservative bids, randomly varying amounts to observe opponents' reactions and adapt to their strategies.\n\n4. **Value Assessment**: Continuously analyze the relationship between perceived values and outcomes to refine future bidding strategies.",
+            "In the upcoming rounds, I will implement a mixed strategy approach. I will start with conservative bids close to my perceived value to gauge competitors' tendencies. In subsequent rounds, I will gradually increase my bids to test aggressive strategies, especially when I perceive a higher common value. I will also analyze previous rounds for bidding patterns from Andy and Betty, adjusting my bids accordingly. Additionally, I will occasionally place low bids to gather data on their reactions and refine my strategy based on their bidding behavior, aiming to maximize long-term profits while minimizing losses."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            13,
+            120,
+            71
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 12.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 35.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 78.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 35.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            -13.0
+        ],
+        "common": 22,
+        "plan": [
+            "In this round, I will bid slightly below my perceived value, aiming for a balance between winning and minimizing losses. I will also analyze previous bids from Betty and Charles for patterns. Additionally, I will introduce an occasional aggressive bid to test their reactions and refine my strategy.",
+            "In round 1, bid $35 to test competitors' thresholds aggressively. In round 2, analyze their bids and adjust; if they bid high, lower to $30 for data gathering. In rounds 3-6, alternate between slight aggressive and conservative bids to refine understanding of competitors' strategies and perceived values.",
+            "In this round, I will bid conservatively at 78 to gauge competitors' reactions. I will analyze their bids closely for patterns. In future rounds, I will gradually increase bids when I perceive higher common values and occasionally test low bids to gather more data on their bidding strategies."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            -10,
+            42,
+            102
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 11.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 83.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 30.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            44.0
+        ],
+        "common": 74,
+        "plan": [
+            "In the next round, I will bid slightly above my perceived value to test if it deters competitors, aiming for a balance between aggression and caution. I will analyze Betty and Charles's responses to higher bids and adjust my strategy based on their behaviors to maximize future profits.",
+            "In round 2, bid $30 to gather data on competitors while minimizing risk. In rounds 3-4, alternate between $35 and $25 to assess their reactions. In rounds 5-6, shift to aggressive bids around perceived values to test thresholds. Continuously analyze outcomes to refine future strategies.",
+            "In the next round, I will bid 83 to test a slightly more aggressive strategy while still staying below my perceived value. I will analyze Andy and Betty's bids closely to identify their tendencies. Based on their reactions, I will adjust my future bids accordingly for optimal profit."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            0,
+            86,
+            109
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 23.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 35.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 75.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 35.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            1.0
+        ],
+        "common": 36,
+        "plan": [
+            "In the next round, I will bid aggressively, around 23.0, to test competitiveness against higher bids. I will analyze Bidder Betty and Bidder Charles's reactions to this strategy and adjust future bids based on their patterns, aiming for optimal profit while managing risks effectively.",
+            "1. **Round 3**: Bid $35 to test competitors' thresholds again, observing their reactions.\n2. **Round 4**: If bids are high, lower to $25 to gather data.\n3. **Rounds 5-6**: Alternate between $40 and $30 to assess competitor strategies and refine bids based on outcomes.",
+            "In the next round, I will bid 75 to balance caution and aggression, slightly below my perceived value. I will analyze Andy and Betty's bids for patterns, adjusting my strategy accordingly. I will also incorporate a low bid of 60 in a future round to gather more data on their behaviors."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            -46,
+            85,
+            -35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 15.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 25.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 85.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 25.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            -2.0
+        ],
+        "common": 23,
+        "plan": [
+            "In the next round, I will bid conservatively around 15.0 to balance winning chances and minimizing losses. I will also analyze Betty and Charles's bidding patterns for insights. Additionally, I will incorporate a 10% aggressive bid strategy to test their reactions and refine my overall approach.",
+            "**Round 4 Plan**: Bid $25 to gather data on competitors' behavior. Monitor their reactions closely. In Round 5, if bids remain high, shift to $40 to test aggressive thresholds. In Round 6, adjust bids between $30 and $45 based on observed strategies to refine future bidding.",
+            "In the next round, I will bid 85 to test a more aggressive strategy while remaining mindful of my perceived value. I will analyze Andy and Betty's bids for patterns. Additionally, I will plan a low bid of 60 in a future round to further understand their strategies."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            -29,
+            71,
+            -24
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 10.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 40.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 65.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 40.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            -19.0
+        ],
+        "common": 21,
+        "plan": [
+            "In the next round, I will bid slightly below my perceived value to minimize losses while observing Betty and Charles's bidding patterns. I will also incorporate occasional aggressive bids to test their reactions and identify optimal thresholds, aiming for a mix of caution and calculated risk to maximize future profits.",
+            "**Round 5 Plan**: Bid $40 to test aggressive thresholds, aiming for a win against potentially lower bids. In Round 6, adjust to $30 for data gathering. Monitor competitors' reactions closely to refine bidding strategies and assess their willingness to bid high or low. Focus on profit maximization.",
+            "In the next round, I will bid 65 to minimize losses while still being competitive. I will analyze Andy and Betty's bidding patterns for low-risk strategies. In subsequent rounds, I will gradually increase bids to test aggression when I perceive higher common values, adjusting based on their reactions."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            112,
+            82,
+            62
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 20.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 70.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 30.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            45.0
+        ],
+        "common": 75,
+        "plan": [
+            "In the next round, I will bid 20.0, slightly above my perceived value to test aggressive strategies. I will analyze Betty and Charles's responses closely to identify their bidding patterns. Additionally, I will implement a 10% conservative bid strategy to balance risk and potential profit effectively.",
+            "**Round 6 Plan**: Bid $30 to gather data on competitors' behavior and assess their willingness to bid high. In Round 7, increase to $45 to test aggressive thresholds. Analyze outcomes to refine strategies, focusing on balancing aggressive bids with conservative ones for optimal long-term profit maximization.",
+            "In the next round, I will bid 70 to balance caution and aggression, slightly above my perceived value. I will analyze Andy and Betty\u2019s bids for patterns, adjusting my strategy accordingly. I will also incorporate a lower bid of 50 in a future round to gather more data."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            115,
+            -7,
+            70
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 50.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 45.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 80.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 50.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            2.0
+        ],
+        "common": 52,
+        "plan": [
+            "In the next round, I will bid 50.0, testing a more aggressive strategy to capture potential wins. I will analyze Betty and Charles's bidding patterns closely, adjusting my approach based on their bids. Additionally, I will implement a conservative strategy by occasionally bidding slightly below perceived value for balance.",
+            "**Round 7 Plan**: Bid $45 to test aggressive thresholds against perceived values. In Round 8, analyze competitors' bids; if they remain high, adjust to $35 for data gathering. In Rounds 9-10, alternate between $50 and $30 to refine strategies based on observed behaviors, maximizing long-term profit potential.",
+            "In the next round, I will bid 80 to test a more aggressive strategy while analyzing Andy and Betty's bidding patterns for potential adjustments. I will also plan a low bid of 50 in a future round to gather data on their responses and refine my overall approach."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            -10,
+            114,
+            -5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 35.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 70.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 35.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            12.0
+        ],
+        "common": 47,
+        "plan": [
+            "In the next round, I will bid 30.0, slightly below my perceived value to balance risk and potential profit. I will analyze Betty and Charles's bidding patterns closely, adjusting my strategy if they bid aggressively. Additionally, I will incorporate occasional higher bids to test their limits and reactions.",
+            "**Round 8 Plan**: Bid $35 to gather data on competitor thresholds. If bids are high, adjust to $30 for further analysis. In Rounds 9-10, alternate between $50 and $25 to refine strategies based on observed behaviors, maximizing long-term profit potential while balancing aggressive and conservative approaches.",
+            "In the next round, I will bid 70 to balance caution and aggression. I will analyze Andy and Betty's bids closely for patterns. I will also implement a low bid of 50 in a future round to gather data on their reactions and refine my strategy accordingly."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            136,
+            15,
+            124
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 40.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 50.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 50.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 50.0
+            }
+        },
+        "profit": [
+            0,
+            24.0,
+            0
+        ],
+        "common": 74,
+        "plan": [
+            "In the next round, I will bid conservatively around 40, slightly below my perceived value, to minimize losses while maximizing winning chances. I will also incorporate occasional aggressive bids above perceived value to test competitors' responses and adjust my strategy based on their bidding patterns for optimal profit.",
+            "**Round 9 Plan**: Bid $50 to test aggressive thresholds, aiming for a win against potentially lower bids. If competitors bid high, adjust to $25 in Round 10 for data gathering. Analyze outcomes closely to refine strategies and maximize long-term profit based on observed behaviors.",
+            "In the next round, I will bid 50 to gather data on Andy and Betty's reactions to lower bids. I will analyze their bidding patterns closely. Following this, I will gradually increase my bids in subsequent rounds to test aggressive strategies when I perceive higher common values."
+        ]
+    }
+}

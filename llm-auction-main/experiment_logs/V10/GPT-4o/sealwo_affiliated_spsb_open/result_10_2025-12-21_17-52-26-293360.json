@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            142,
+            61,
+            123
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 61.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 120.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 100.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            23.0
+        ],
+        "common": 59,
+        "plan": [
+            "In the upcoming rounds, I will test a mix of bidding strategies to maximize long-term profit. I will start with conservative bids around 70-80% of my value to gauge opponents' tendencies. I\u2019ll also experiment with aggressive bids slightly above my estimated value when I suspect others may bid low. Additionally, I\u2019ll observe patterns in previous rounds to adjust my bids accordingly, particularly focusing on the second-highest bids to optimize my winnings. I will also consider a low-ball strategy in a round to gather data on competitors\u2019 risk appetites. Data collection will guide future bidding adjustments.",
+            "In the upcoming rounds, I will employ a mix of aggressive and conservative bidding strategies. Initially, I will bid close to my perceived value, adjusting based on observed bids from Andy and Charles. If I notice consistent high bids, I will adopt a more aggressive strategy, bidding slightly above my value to capture the prize. Conversely, if bids are low, I will play conservatively, bidding just below the expected second-highest bid. Additionally, I will analyze previous rounds to identify patterns in opponents' bidding behavior, allowing for more informed decisions in future rounds.",
+            "In the upcoming rounds, I will implement a diversified bidding strategy. Initially, I\u2019ll bid slightly below my estimated value to gauge competitors' responses. In subsequent rounds, I\u2019ll experiment with aggressive bids (around 80-90% of my value) to test if higher bids yield better profits. Additionally, I\u2019ll analyze previous rounds to identify patterns in competitors' bidding behaviors, adjusting my bids accordingly. I\u2019ll also incorporate a conservative approach by occasionally bidding lower than my estimated value to preserve earnings when I suspect others may bid high. Continuous evaluation of results will refine my strategy further."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            67,
+            120,
+            96
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 110.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 62.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 81.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 81.0
+            }
+        },
+        "profit": [
+            -14.0,
+            0,
+            0
+        ],
+        "common": 22,
+        "plan": [
+            "In the next round, I will bid 110, reflecting a balance between aggressive and conservative strategies. This targets potential high values while still allowing for profit if I win. I will also analyze the second-highest bids to refine future strategies, focusing on understanding opponents' bidding behavior.",
+            "I will bid slightly above my perceived value, starting at $62, to increase my chances of winning. I\u2019ll monitor Andy and Charles' bids closely; if they consistently bid high, I'll adjust upwards. If bids are low, I\u2019ll consider conservative bids around $59 to optimize profit potential.",
+            "In the next round, I will bid around 85% of my value to test aggressive strategies while monitoring competitors\u2019 bids. I'll also occasionally underbid to preserve earnings when I sense high competition. Analyzing bid patterns will refine my approach for subsequent rounds, balancing risk and profit."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            81,
+            107,
+            137
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 95.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 72.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 82.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 82.0
+            }
+        },
+        "profit": [
+            -1.0,
+            0,
+            0
+        ],
+        "common": 74,
+        "plan": [
+            "In round 2, I will bid 95, slightly below my value to balance risk and potential profit. I will observe competitors' bids closely, especially the second-highest, to refine my strategy. I'll analyze how often they bid aggressively or conservatively to adjust my future bids accordingly.",
+            "In round 2, I will bid $72, slightly above my perceived value of 120, to remain competitive. I\u2019ll analyze Andy and Charles\u2019 bidding patterns closely, adjusting my strategy based on their bids. If they bid high, I'll consider increasing my bid incrementally to secure a win.",
+            "In round 2, I will bid 85% of my value (approximately 82.0) to test aggressive strategies while monitoring competitors. I\u2019ll analyze their bidding patterns and occasionally underbid to preserve earnings. This balanced approach will help refine my strategy for future rounds and maximize long-term profit."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            67,
+            110,
+            122
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 85.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 82.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 110.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 85.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            37.0
+        ],
+        "common": 36,
+        "plan": [
+            "In round 3, I will bid 85.0 to test a conservative approach, balancing risk and potential profit. I\u2019ll analyze competitors\u2019 bidding patterns, focusing on the second-highest bids to refine my strategy. This round will help gauge their tendencies for future aggressive or conservative bids.",
+            "In the next round, I will bid closer to my perceived value, starting at $82, to remain competitive. I\u2019ll analyze Andy and Charles' bids to adjust my strategy dynamically. If their bids are consistently high, I will incrementally increase my bid to capture potential wins.",
+            "In the next round, I will bid 90% of my value to test a more aggressive strategy. I will analyze previous bids for patterns and adjust accordingly. Additionally, I\u2019ll implement occasional underbidding to preserve earnings during high competition. This balanced approach will enhance my long-term profit potential."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            38,
+            103,
+            43
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 80.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 92.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 39.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 80.0
+            }
+        },
+        "profit": [
+            0,
+            23.0,
+            0
+        ],
+        "common": 23,
+        "plan": [
+            "In round 4, I will bid 80, slightly below my value to test conservative strategies while observing opponents' tendencies. I will analyze second-highest bids to refine my approach. I will gather data on their risk appetites, adjusting future bids based on observed patterns for optimal long-term profit.",
+            "In the next round, I will bid $92, slightly above my value of 110, to increase my chances of winning. I will closely monitor Andy and Charles' bids to adjust my strategy. If they bid high, I\u2019ll consider further aggressive increments; if low, I\u2019ll revert to conservative bids.",
+            "In the next round, I will bid 90% of my value to test aggressive strategies while monitoring competitors' bids. I will also implement occasional underbidding to preserve earnings when competition is high. Continuous analysis of bidding patterns will refine my strategy for maximizing long-term profit."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            45,
+            95,
+            48
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 75.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 92.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 43.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 75.0
+            }
+        },
+        "profit": [
+            0,
+            20.0,
+            0
+        ],
+        "common": 21,
+        "plan": [
+            "In the next round, I will bid 75, balancing between conservative and aggressive strategies. I\u2019ll analyze the second-highest bids closely to understand competitors' tendencies. Additionally, I\u2019ll consider a low-ball strategy in a future round to gauge their risk appetite and adjust my bids accordingly for optimal profit.",
+            "In the next round, I will bid $92, monitoring Andy and Charles closely. If their bids trend higher, I\u2019ll increase my bid incrementally to capture wins. If they bid lower, I\u2019ll drop to $85 to optimize profit while remaining competitive. Flexibility will be key in adjusting my strategy.",
+            "In the next round, I will bid 90% of my value to test aggressive strategies. I will analyze competitors' previous bids for patterns and adjust accordingly. Additionally, I will occasionally underbid to preserve earnings when I suspect high competition. Continuous evaluation will refine my strategy for maximizing long-term profit."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            143,
+            128,
+            118
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 70.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 90.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 100.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 90.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            28.0
+        ],
+        "common": 75,
+        "plan": [
+            "In round 6, I will bid 70, slightly below my value to adopt a conservative strategy while remaining competitive. I will analyze the second-highest bids to understand opponents\u2019 tendencies better. Additionally, I will explore a low-ball strategy in a future round to gauge risk appetite.",
+            "In the next round, I will bid $90, slightly below my perceived value to maximize profit while remaining competitive. I\u2019ll analyze Andy and Charles' bids closely, adjusting my strategy based on their behavior. If they bid high, I\u2019ll increase my bid; if low, I\u2019ll consider conservative bids around $85.",
+            "In the next round, I will bid 85% of my value to balance aggression and caution. I\u2019ll monitor competitors' bidding patterns closely and occasionally underbid to preserve earnings. This strategy aims to maximize my chances of winning while minimizing potential losses in a competitive environment."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            133,
+            72,
+            110
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 100.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 100.0
+            }
+        },
+        "profit": [
+            33.0,
+            0,
+            0
+        ],
+        "common": 52,
+        "plan": [
+            "In the next round, I will bid aggressively at 100, reflecting my high value of 143. This aims to maximize profit if I win. I will also analyze the second-highest bids closely to adjust future strategies based on competitors' tendencies and risk appetites.",
+            "In the next round, I will bid $100, close to my value of $128, to remain competitive. I\u2019ll monitor Andy and Charles closely; if they bid high, I\u2019ll adjust upwards. If their bids are low, I\u2019ll consider conservative bids around $85 to optimize profit while maintaining competitiveness.",
+            "In the next round, I will bid 90% of my value to maintain an aggressive stance while monitoring competitors' bids. I will also implement underbidding strategies when I suspect high competition. Continuous analysis of bidding patterns will help refine my approach for maximizing long-term profit."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            68,
+            130,
+            70
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 95.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 70.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 95.0
+            }
+        },
+        "profit": [
+            -27.0,
+            0,
+            0
+        ],
+        "common": 47,
+        "plan": [
+            "In the next round, I will bid $99 to test a slightly lower aggressive strategy, maximizing potential profit while remaining competitive. I will closely analyze the second-highest bids to refine my understanding of opponents' tendencies and adjust my future bids based on their risk appetites for optimal long-term profit.",
+            "In the next round, I will bid $95, balancing competitiveness and profit potential based on my value of 72. I'll monitor Andy and Charles closely; if they bid high, I\u2019ll increase my bid incrementally. If their bids are low, I\u2019ll adjust downwards to optimize profit.",
+            "In the next round, I will bid 100% of my value to maximize winning potential, closely observing competitors' bids. I\u2019ll also analyze previous rounds for patterns, adjusting bids accordingly. If competition is high, I\u2019ll consider underbidding slightly to preserve earnings while still aiming for a win."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            154,
+            94,
+            148
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 85.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 105.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 126.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 105.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            43.0
+        ],
+        "common": 74,
+        "plan": [
+            "In the next round, I will bid conservatively at 85.0, slightly below my value, to gauge competitors' tendencies. I will analyze second-highest bids closely for insights on their risk appetite. Additionally, I will prepare a low-ball strategy for a future round to gather more data on bidding behaviors.",
+            "In the next round, I will bid aggressively, starting at $105, aiming to capture potential wins. I\u2019ll closely monitor Andy and Charles' bids; if they consistently bid high, I\u2019ll increase further. If they bid low, I\u2019ll adjust down to around $90 to optimize profit. Flexibility is key.",
+            "In the next round, I will bid 85% of my value to balance aggression and caution. I\u2019ll analyze competitors\u2019 bids for patterns, adjusting accordingly. If competition appears high, I\u2019ll consider underbidding slightly to preserve earnings while aiming for a win. Continuous evaluation will refine my strategy."
+        ]
+    }
+}
