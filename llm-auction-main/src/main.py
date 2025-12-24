@@ -51,7 +51,7 @@ if __name__ == "__main__":
         open_blind=open_blind, 
         rounds=round, turns=turns , common_range=[20, 79], private_range=99, increment=1, 
         number_agents=number_agents,
-        special_name="common_spsb.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
+        special_name="private_third_price.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
         closing = closing,
         reserve_price = reserve_price)
     rule.describe()
