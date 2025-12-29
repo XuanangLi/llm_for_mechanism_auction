@@ -26,11 +26,11 @@ if __name__ == "__main__":
     c = Cache()
     
     # Rule Option Menu
-    seal_clock = 'seal'
+    seal_clock = 'clock'
     ascend_descend = 'ascend'  ### ascend / descend
-    price_order = 'third'      ### first / second / third / all-pay
-    private_value = 'private'  ### private / common / affiliated
-    open_blind = 'open'            ### In AC, whether the information is blind or open
+    price_order = ''      ### first / second / third / all-pay
+    private_value = 'affiliated'  ### private / common / affiliated
+    open_blind = 'blind'            ### In AC, whether the information is blind or open
     number_agents = 3
     human = False                  ## Humanistic prompt or not
     ebay = False                    ## If it's eBay auction
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     closing = True
     reserve_price = 60
     
-    output_dir = f"gpt4o-mini_results/SEAL/seal_third_private"
+    output_dir = f"gpt4o-mini_results/clock_ascend_affiliated_closed"  #/CLOCK
     # {seal_clock}_{ascend_descend}_{price_order}_{private_value}_{open_blind}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         open_blind=open_blind, 
         rounds=round, turns=turns , common_range=[20, 79], private_range=99, increment=1, 
         number_agents=number_agents,
-        special_name="private_third_price.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
+        special_name="affiliated_ac_closed.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
         closing = closing,
         reserve_price = reserve_price)
     rule.describe()
