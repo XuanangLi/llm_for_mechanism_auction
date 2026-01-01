@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            79,
+            83,
+            2
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 32.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 58.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 58.0
+            }
+        },
+        "profit": [
+            -32.0,
+            25.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "Since this is an All-Pay auction, every bid is a sunk cost. My initial goal is to gauge opponent aggression without incurring heavy losses.\n\nFor Round 1, I will test a **High-Threshold Conservative** strategy:\n1.  **If Value < 60:** Bid **$0**. I will conserve capital and observe if Betty or Charles bid irrationally high on unknown values.\n2.  **If Value \u2265 60:** Bid approximately **40% of my value** (e.g., Value 80 $\\rightarrow$ Bid 32).\n\nThis approach minimizes negative expected value while testing if opponents are playing the theoretical equilibrium (which requires very low bids) or overbidding.",
+            "I will adopt a polarized testing phase to gauge opponent aggression in this all-pay auction. For values under $40, I will bid $0 to conserve capital and observe. For strong valuations ($70+), I will test an aggressive stance, bidding approximately 60-75% of my value. This high-risk approach aims to intimidate Andy and Charles early or force them to overpay, revealing their risk tolerance. Based on their responses, I will calibrate my bid-shading ratios in subsequent rounds to exploit any identified timidity or recklessness.",
+            "Given the all-pay auction mechanic, avoiding uncompensated loss is crucial. I will test a conservative baseline to gauge opponent aggression. \n\nIf my value is low (<$50), I will bid $0. This allows me to observe Andy and Betty's behavior without financial risk. \n\nIf my value is high (>$50), I will bid approximately 20% of my value. This low-risk approach tests if opponents are overbidding or leaving room for profit. I need to establish their \"aggression baseline\" before risking significant capital on higher bids."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            64,
+            5,
+            45
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 0.0
+            }
+        },
+        "profit": [
+            -0.0,
+            5.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "I will implement a polarized \"All-or-Nothing\" strategy. If my value is under 75, I will bid 0 to avoid sunk costs. If my value is 75+, I will bid aggressively (60+) to surpass the previous high of 58, ensuring that if I pay, I likely win.",
+            "Given the wide win margin, I will refine efficiency. For values under $50, I will bid $0 to minimize loss. For values over $50, I will lower my bid to ~40-50% of value. This targets the observed opponent max of 32 while reducing overpayment risk in this all-pay setting.",
+            "Opponents bid aggressively (32, 58). In all-pay auctions, avoiding loss is priority. I will bid $0 for values < 70 to conserve capital. If my value is > 70, I will bid approximately 60% of my value to challenge the high bids while maintaining a profit margin."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            98,
+            74,
+            7
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 2.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 1.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 2.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 2.0
+            }
+        },
+        "profit": [
+            96.0,
+            -1.0,
+            -2.0
+        ],
+        "common": 0,
+        "plan": [
+            "Observing the opponents' zero-bids, I will adopt a \"Minimum Viable Bid\" strategy. If my value exceeds 10, I will bid $1 to steal the pot cheaply. If my value is high (>70), I will bid $2 to guard against slight increases. I must capitalize on their passivity immediately without overspending.",
+            "Opponents played 0; the environment seems passive. In this all-pay setting, I must minimize wasted spend. I will bid $0 for values under $25. For values over $25, I will bid exactly $1 to punish their passivity and secure the win cheaply without risking significant capital.",
+            "Since opponents bid 0 last round, I will test a low-ball strategy to exploit their passivity. For any value > 5, I will bid $2. This minimizes capital risk in this all-pay setting while likely securing the prize against non-bidders, yielding high profit margins."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            33,
+            63,
+            32
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 3.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 4.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 3.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 4.0
+            }
+        },
+        "profit": [
+            -3.0,
+            59.0,
+            -3.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents are bidding low ($1-$2). To guarantee wins without risky tie-breaks, I will bid $3 if my value exceeds 20, clearing their observed maximum. If my value is under 20, I will bid $0 to preserve capital. This exploits their passivity while ensuring victory on good hands.",
+            "Opponents are bidding very low (max $2). To exploit this, I will bid $0 for low values (<15) to avoid waste. For moderate-to-high values, I will jump to $3 or $4 to clear their low bids and secure wins while maintaining a high profit margin.",
+            "Opponents' max bid was 2. I will exploit this low ceiling. If Value < 4, bid 0 to conserve capital. If Value $\\ge$ 4, bid 3. This small increment guarantees a win against previous behavior while maintaining a high profit margin and minimizing loss risk."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            31,
+            74,
+            86
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 6.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 5.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 6.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 6.0
+            }
+        },
+        "profit": [
+            -6.0,
+            -5.0,
+            80.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents topped out at 4. I must escalate slightly to guarantee wins. If my value > 15, I will bid 6 to clear their range. If value <= 15, I bid 0. This secures high-value wins while minimizing risk against their low-bid pattern.",
+            "Opponents remain extremely passive (max bid 3). I will exploit this by bidding 0 for values < 5. For values $\\ge$ 5, I will bid 5. This dominates their observed range while minimizing cost, ensuring high-margin wins without unnecessary risk.",
+            "Opponents bid surprisingly low (max 4). I will polarize my strategy to exploit this. If Value < 7, bid 0 to avoid sunk costs. If Value $\\ge$ 7, bid 6. This targets the observed low ceiling to secure wins cheaply, avoiding the worst-case scenario of paying without winning."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            6,
+            15,
+            80
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 8.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 8.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 8.0
+            }
+        },
+        "profit": [
+            -0.0,
+            7.0,
+            -8.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents cluster at 5-6. Ties are costly in all-pay auctions. I must clear this range decisively. If my value > 15, I will bid 8 to guarantee a win against static low-bidders. If value <= 15, I bid 0. This exploits their conservatism while avoiding the \"second-place\" trap.",
+            "Opponents escalated to 6. I must clear this threshold to stop wasting high values. Strategy: Bid 0 for values < 12 to avoid waste. For values $\\ge$ 12, bid 8. This aggressively targets wins against their current range while limiting exposure if I lose.",
+            "Opponents seem capped at 6. I will test a static aggressive threshold to lock in wins. If Value < 10, bid 0. If Value $\\ge$ 10, bid 8. This creates a safety margin above their max bid to guarantee wins on viable hands, avoiding the tie-break risk identified in my analysis."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            20,
+            3,
+            24
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 9.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 10.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 10.0
+            }
+        },
+        "profit": [
+            -9.0,
+            -0.0,
+            14.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents capped at 8. I will exploit this by bidding 9 if my Value > 12, securing wins cheaply. If Value <= 12, I bid 0 to avoid the all-pay penalty. This strategy targets their observed behavior while preserving capital during low-value rounds.",
+            "Opponents are sticky at 8. Ties are dangerous in all-pay auctions. Strategy: Bid 9 for values $\\ge$ 10 to guarantee wins against the 8-bidder. Bid 0 for values < 10. This eliminates tie-risk, exploits their static ceiling, and secures deterministic profit.",
+            "Opponents' bids remain low ($\\le$ 8). To avoid tie-break losses like in Round 5, I will bid 10 if Value $\\ge$ 15. If Value < 15, I bid 0. This ensures I dominate their range on profitable hands while minimizing losses on weak ones."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            74,
+            27,
+            68
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 12.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 12.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 11.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 12.0
+            }
+        },
+        "profit": [
+            62.0,
+            -12.0,
+            -11.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents escalated to 10. To avoid costly near-misses, I will polarize. If Value > 20, I bid 12 to beat their new max. If Value <= 20, I bid 0. This avoids the \"all-pay\" trap while securing profitable wins.",
+            "Opponents escalated to bidding 9 and 10. To ensure a win without overpaying, I need to clear this new ceiling. Strategy: If Value > 15, bid 12 to secure the win. If Value $\\le$ 15, bid 0. This avoids the sunk cost of losing bids while exploiting their low cap.",
+            "Opponents cap around 9. I will exploit this soft cap. If Value > 15, I bid 11 to strictly beat their range. If Value $\\le$ 15, I bid 0 to avoid all-pay losses. This secures wins against their current strategy while protecting capital on weak hands."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            53,
+            43,
+            64
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 14.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 14.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 14.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 14.0
+            }
+        },
+        "profit": [
+            -14.0,
+            -14.0,
+            50.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents are capping bids around 12. To guarantee a win without relying on ties, I will bid 14 if my Value > 15. If my Value is low (<= 15), I will bid 0 to conserve capital. This exploits their predictable low-bid ceiling.",
+            "Opponents are clustered at 11-12. Ties are disastrous in all-pay auctions. Strategy: If Value > 18, bid 14 to decisively clear their cap. If Value $\\le$ 18, bid 0. This polarized approach avoids the mid-range \"danger zone\" of sunk costs, securing profit only when the win is guaranteed against current history.",
+            "Opponents capped at 12. Close losses are disastrous in all-pay auctions. I must clear their range decisively. If Value > 20, I will bid 14 to strictly beat 12. If Value $\\le$ 20, I bid 0. This strategy targets high-margin wins while eliminating risk on low values."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            81,
+            20,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 16.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 16.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 16.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 16.0
+            }
+        },
+        "profit": [
+            -16.0,
+            4.0,
+            -16.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents clustered at 14 last round. To break this tie-prone ceiling, I will bid 16 if my Value > 20. This small premium secures the win against their static strategy. If Value <= 20, I bid 0 to avoid sunk costs. This exploits their predictable, low-range bidding behavior.",
+            "Opponents are static at 14. Ties are costly. Strategy: Polarized bidding. If Value > 16, bid 16 to decisively beat the 14-cluster and potential 15-adjustments. If Value $\\le$ 16, bid 0. This avoids sunk costs and targets high-probability wins.",
+            "Opponents converged at 14. Ties are ruinous in all-pay auctions. I must clear this range. If Value > 25, I bid 16 to strictly beat 14 and potential 15s. If Value $\\le$ 25, I bid 0. This strategy avoids the risk of close losses."
+        ]
+    }
+}

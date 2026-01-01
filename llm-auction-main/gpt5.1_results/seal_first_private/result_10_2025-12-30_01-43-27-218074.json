@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            40,
+            57,
+            17
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 34.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 4.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 34.0
+            }
+        },
+        "profit": [
+            0,
+            23.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Start with mildly shaded bidding: bid \u2248 0.7\u00b7value for values 0\u201360, 0.8\u00b7value for 61\u201390, 0.9\u00b7value for 91\u201399.  \n2. Occasionally explore extremes: with 10% probability, bid very low (0.3\u00b7value) and with 10% probability bid very high (min(value+10, 99)) to probe rivals.  \n3. Track rivals\u2019 average winning bids by value range (0\u201333, 34\u201366, 67\u201399).  \n4. Gradually adjust multipliers toward estimated rival levels that yield positive expected profit, increasing aggressiveness if often losing with high surplus.",
+            "Early rounds (1\u20133):  \n- Test linear shading: bid \u2248 0.6v, 0.8v, and v on similar-value ranges to infer rivals\u2019 aggressiveness.  \n- Occasionally bid very low (0\u20130.3v) on mid values to see clearing prices when losing.\n\nMiddle rounds (4\u20137):  \n- Conditional strategy by value:  \n  - v<30: bid 0\u20130.3v  \n  - 30\u2264v<70: bid 0.6\u20130.8v  \n  - v\u226570: mix 0.8v, v, and v+5 \u201coverbids\u201d to probe rivals\u2019 ceilings.\n\nLate rounds (8\u201310):  \n- Exploit learned patterns: choose bid function maximizing expected profit given observed rival bids.",
+            "1. Low values (0\u201325): Mostly bid 0\u20135 to map others\u2019 aggression; occasionally bid value/2 for exploration.  \n2. Mid values (26\u201360): Test three regimes:  \n   - Conservative: ~0.4\u00d7value  \n   - Moderate: ~0.7\u00d7value  \n   - Aggressive: ~value or value+1\u20133  \n   Rotate these to estimate win rates and profit.  \n3. High values (61\u201399):  \n   - Often bid near value (value\u20135 to value+3).  \n   - Occasionally overbid (value+5\u201310) to probe rivals\u2019 ceilings.  \n4. Adapt: Shift toward regimes with highest average profit per value band."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            75,
+            94,
+            20
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 56.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 75.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 10.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 75.0
+            }
+        },
+        "profit": [
+            0,
+            19.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. For value \u226450: bid 0.65\u00b7value; 51\u201380: 0.75\u00b7value; 81\u201399: 0.85\u00b7value.  \n2. With 15% probability, explore: 7.5% at 0.3\u00b7value, 7.5% at min(value+12, 99).  \n3. Track rivals\u2019 winning bids by tercile and adjust multipliers toward break\u2011even thresholds.",
+            "Round 1\u20133 experiments:  \n- v<30: bid 0\u20130.2v.  \n- 30\u2264v<60: alternate 0.5v, 0.7v.  \n- 60\u2264v<85: alternate 0.6v, 0.8v.  \n- v\u226585: test 0.8v, v, v+5.  \nTrack clearing prices and rivals\u2019 max bids by value range to refine later.",
+            "Next rounds, I\u2019ll:\n\n- Keep very low bids for values \u226425, but occasionally try value/2 and value\u20131.  \n- For 26\u201360, systematically cycle 0.4v, 0.7v, and v\u20133.  \n- For \u226561, test v\u20138, v\u20133, and v+3.  \n- Track profit by band; favor most profitable rule."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            50,
+            49,
+            39
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 15.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 20.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 27.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 27.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            12.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Update: rivals sometimes bid near value (34 on 40s, 75 on 70s).  \n2. New baseline: \u226450 \u2192 0.6v; 51\u201380 \u2192 0.7v; 81\u201399 \u2192 0.8v.  \n3. Exploration (20%): half at 0.3v, half at min(v+15,99).  \n4. Log rivals\u2019 bids vs. value to refine multipliers.",
+            "Rounds 2\u20133 tests:  \n- v<30: bid 0\u20130.2v.  \n- 30\u2264v<60: alternate 0.4v, 0.6v.  \n- 60\u2264v<85: alternate 0.5v, 0.7v.  \n- v\u226585: alternate 0.6v, 0.75v, 0.9v.  \nRecord rivals\u2019 max bids vs. value band to shape rounds 4\u20137.",
+            "Values 0\u201325: Mostly bid 0\u20133; occasionally test value/2 and value\u20131.  \n26\u201360: Cycle three rules by round: 0.4v, 0.7v, v\u20133; log win rates and profits.  \n61\u201399: Test v\u20138, v\u20133, v+3; rarely v+8 to probe ceilings. Adjust toward highest profit per band."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            37,
+            37,
+            37
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 20.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 22.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 26.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 26.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            11.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Infer rivals\u2019 shading: winners ~0.7\u20131.0 of value; nonwinners often low.  \n2. Next baseline: \u226450 \u2192 0.55v; 51\u201380 \u2192 0.68v; 81\u201399 \u2192 0.78v.  \n3. Exploration 25%: 10% at 0.3v, 15% at min(v+18,99).  \n4. Track win rates by value tercile.",
+            "Rounds 3\u20135 (exploration):  \n- v<30: bid 0\u20130.2v.  \n- 30\u2264v<60: mix 0.4v, 0.6v, and near-rival-top (20\u201330).  \n- 60\u2264v<85: mix 0.6v, 0.8v.  \n- v\u226585: mix 0.7v, 0.9v, v+3.  \n\nRounds 6\u201310: exploit empirically best markup.",
+            "Banded, data-driven strategy:\n\n- 0\u201325: Mostly bid 0\u20132; 20% of time test value/2 or value\u20131.  \n- 26\u201360: Cycle 0.4v, 0.55v, 0.7v, v\u20135; track profit and minimal winning bids.  \n- 61\u201399: Test v\u201310, v\u20136, v\u20133, v+2; occasionally v+7 to probe rivals\u2019 ceilings."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            86,
+            48,
+            62
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 69.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 31.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 58.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 69.0
+            }
+        },
+        "profit": [
+            17.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226450 \u2192 0.6v; 51\u201380 \u2192 0.7v; 81\u201399 \u2192 0.8v.  \n2. Targeted mid-range test (30\u201345): 60% at 23\u201326 if v\u226535, else 0.6v.  \n3. Exploration 25%: 10% at 0.3v, 15% at min(v+20,99).  \n4. Track win margins, adjust multipliers.",
+            "Rounds 4\u20135 (refined exploration):  \n- v<30: bid 0\u20130.2v.  \n- 30\u2264v<60: mix 0.5v, 0.65v, and 22\u201328 to probe rivals\u2019 midrange.  \n- 60\u2264v<85: mix 0.6v, 0.75v.  \n- v\u226585: mix 0.7v, 0.85v.  \n\nRounds 6\u201310: shift toward empirically highest-profit shading.",
+            "Values 0\u201325: Mostly bid 0\u20132; 25% of time test value/2 or value\u20131.  \n26\u201360: Rotate 0.4v, 0.55v, 0.7v, v\u20134; log rivals\u2019 max bids and my profit.  \n61\u201399: Use v\u20138, v\u20134, v\u20131, and rare v+3 to probe ceilings; favor best ROI."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            19,
+            80,
+            86
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 6.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 56.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 81.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 81.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            5.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226450 \u2192 0.58v; 51\u201380 \u2192 0.68v; 81\u201399 \u2192 0.78v.  \n2. If v\u226570, cap bid at max(0.65v, second\u2011highest observed in that tercile +2).  \n3. Exploration 25%: 10% at 0.3v, 15% at min(v+18,99).  \n4. Track rivals by tercile.",
+            "Rounds 5\u20137 (targeted tests):  \n- v<30: bid 0\u20130.15v.  \n- 30\u2264v<60: alternate 0.45v, 0.6v, and fixed 24\u201332.  \n- 60\u2264v<85: alternate 0.6v, 0.7v.  \n- v\u226585: alternate 0.7v, 0.8v.  \n\nRounds 8\u201310: adopt empirically best mapping.",
+            "Next rounds:\n\n- 0\u201325: Mostly bid 0\u20132; 30% of time test value/2 or value\u20131.  \n- 26\u201360: Systematically rotate 0.45v, 0.6v, 0.75v, v\u20134; track win margin and profit.  \n- 61\u201399: Test v\u20139, v\u20135, v\u20132, and occasional v+2; favor rules with highest average profit."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            16,
+            71,
+            56
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 5.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 50.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 34.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 50.0
+            }
+        },
+        "profit": [
+            0,
+            21.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Round 6+ plan:  \n1) Baseline: v\u226450 \u2192 0.6v; 51\u201380 \u2192 0.7v; 81\u201399 \u2192 0.8v, rounded.  \n2) Exploration 30%: 10% at 0.3v, 20% at min(v+20,99).  \n3) Track rivals\u2019 max bids by tercile; adjust multipliers toward (expected rival bid \u2013 small margin).",
+            "Rounds 6\u20137 (exploit + probe):  \n- v<30: bid 0\u20130.1v.  \n- 30\u2264v<60: bid 0.55v or 24\u201330.  \n- 60\u2264v<85: bid 0.65\u20130.75v.  \n- v\u226585: bid 0.75\u20130.9v.  \n\nRounds 8\u201310: choose empirically best shading per band.",
+            "Data so far: rivals often bid aggressively (20\u201375), mid\u2013high.  \n\nNext tests:  \n- 0\u201325: Mostly 0\u20132; 30% at value/2 or value\u20131.  \n- 26\u201360: Cycle 0.45v, 0.6v, v\u20136.  \n- 61\u201399: Cycle v\u201310, v\u20136, v\u20133; rare v+2 to probe ceilings."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            67,
+            4,
+            65
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 47.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 59.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 59.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            6.0
+        ],
+        "common": 0,
+        "plan": [
+            "Round 7\u201310 strategy tests:  \n1) Baseline: v\u226450 \u2192 0.6v; 51\u201380 \u2192 0.7v; 81\u201399 \u2192 0.78v.  \n2) Exploration 35%: 15% at 0.3v, 20% at min(v+22,99).  \n3) Conditioned aggression: if v\u226570 and past high bids rare, bid min(0.85v,99).",
+            "Rounds 7\u20138 (refined exploit/probe):  \n- v<30: bid 0\u20130.1v  \n- 30\u2264v<60: bid 0.5\u20130.6v, sometimes fixed 24\u201330  \n- 60\u2264v<85: bid 0.55\u20130.7v, cluster near 35\u201340  \n- v\u226585: bid 0.7\u20130.85v  \n\nRounds 9\u201310: adopt best-performing mapping.",
+            "Next rounds:\n\n- 0\u201325: Mostly bid 0\u20132; 35% at value/2 or value\u20131.  \n- 26\u201360: Focus on 0.6v and v\u20136; occasionally test 0.45v.  \n- 61\u201399: Emphasize v\u201310 and v\u20136; rare v\u20132 or v+2 to probe ceilings and refine rivals\u2019 max-bid distribution."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            7,
+            41,
+            46
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 4.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 23.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 20.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 23.0
+            }
+        },
+        "profit": [
+            0,
+            18.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Next\u2011round tests (Rounds 8\u201310):  \n1) v\u226440: bid 0.55v; 41\u201370: 0.68v; \u226571: 0.8v.  \n2) Aggression: if v\u226565, 40% chance bid max(0.85v, rival\u2011tercile max+1).  \n3) 25% exploration: half at 0.3v, half at min(v+25,99).",
+            "Rounds 8\u201310 (exploit with light probing):\n\n- v<30: bid 0\u20130.1v, rare 3\u20135 to sample.  \n- 30\u2264v<60: bid 0.5\u20130.6v, occasional fixed 26\u201330.  \n- 60\u2264v<85: bid 0.6\u20130.7v, cluster 35\u201345.  \n- v\u226585: bid 0.7\u20130.82v.",
+            "Updated plan (Rounds 8\u201310):\n\n- 0\u201325: 70% bid 0\u20132; 30% test \u230av/2\u230b or v\u20131.  \n- 26\u201360: Alternate 0.6v and v\u20138; occasional 0.45v when v\u226540.  \n- 61\u201399: Emphasize v\u201312 and v\u20138; 20% at v\u20134; 10% at v+1 to probe ceilings."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            94,
+            68,
+            27
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 71.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 44.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 16.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 71.0
+            }
+        },
+        "profit": [
+            23.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Round 10+ plan:  \n1) v\u226425: bid 0\u20130.3v; 26\u201350: 0.5v; 51\u201380: 0.65v; 81\u201399: 0.75v.  \n2) Exploration 30%: half at 0.2v, half at min(v+20,99).  \n3) Track rivals\u2019 tercile\u2011max bids; if often second\u2011highest, raise multiplier by 0.05 next time.",
+            "Rivals\u2019 top bids cluster 20\u201335 except one 58\u201381 outlier; they shade heavily. Next rounds (9\u201310):  \n- v<30: bid 0\u20130.1v.  \n- 30\u2264v<60: bid 0.5\u20130.55v, target 20\u201326.  \n- 60\u2264v<85: bid 0.6\u20130.65v.  \n- v\u226585: bid 0.7\u20130.8v.",
+            "Data so far: rivals often bid ~20\u201375, sometimes near value. I\u2019ve overpaid on some wins and underbid on some losses.\n\nNext tests (Rounds 9\u201310):\n\n- 0\u201325: 0\u20132; 30% at \u230av/2\u230b.  \n- 26\u201360: mix 0.6v, v\u201310, v\u20134.  \n- 61\u201399: mix v\u201312, v\u20136, rare v\u20132/v+1."
+        ]
+    }
+}

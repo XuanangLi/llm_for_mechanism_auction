@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            93,
+            56,
+            5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 74.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 39.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 39.0
+            }
+        },
+        "profit": [
+            54.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Start with mildly shaded bidding: bid \u2248 0.75\u00b7value for v\u226460, 0.8\u00b7value for v>60 to map opponents\u2019 aggressiveness.  \n2. Occasionally (10\u201315% of rounds) bid very aggressively: \u2248value or value+1 for v\u226570 to test if others shade heavily.  \n3. If opponents overbid (frequent winner profits near 0 or negative), respond with heavier shading: \u22480.6\u00b7value.  \n4. If opponents underbid (winner profits large), increase aggressiveness: \u22480.9\u00b7value for v\u226550.  \n5. Track win rates, profit per win, and opponents\u2019 bid/value ratios to refine.",
+            "1. Early exploration (Rounds 1\u20133):  \n   - Map opponents\u2019 aggressiveness.  \n   - Use value-proportional bids: e.g., bid \u2248 0.7v, 0.9v, and v+\u03b5 in different rounds.  \n   - Occasionally underbid strongly (\u22480.4v) to see if they shade heavily.\n\n2. Adaptive phase (Rounds 4\u20137):  \n   - If others overbid (often >v), shade more (\u22480.5\u20130.7v).  \n   - If others underbid, push to \u22480.9v\u2013v+2.  \n   - Test small random perturbations around current rule.\n\n3. Exploitation (Rounds 8\u201310):  \n   - Lock into best-performing mapping from v to bid, with mild randomization to avoid predictability.",
+            "1. Early exploration (rounds 1\u20133):  \n   - Test aggressive shading: bid = value \u2013 k, with k \u2208 {0,5,10} depending on value range.  \n   - Occasionally overbid slightly above value for mid-range values (40\u201370) to probe rivals\u2019 ceilings.\n\n2. Adaptive phase (rounds 4\u20137):  \n   - Condition bids on inferred distributions of Andy/Betty\u2019s bids: raise bids where we frequently lose by small margins; shade more where we win by large margins.  \n\n3. Exploit phase (rounds 8\u201310):  \n   - Lock into empirically best response schedule; minimize experimentation, avoid overbidding value."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            92,
+            20,
+            63
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 74.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 13.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 60.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 60.0
+            }
+        },
+        "profit": [
+            32.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Keep baseline: bid 0.75v for v\u226460, 0.8v for v>60.  \n2. Add low\u2011value exploration: for v<30, sometimes bid 0.9v.  \n3. For v\u226580, 20% of time bid v or v\u22121.  \n4. Track opponents\u2019 max/second bids to infer shading and adjust aggressiveness.",
+            "Rounds 1\u20133:  \n- Use three rules: 0.5v, 0.8v, and min(v+5, 99), each at least once.  \n- Add \u00b13 random noise to each test bid.  \n\nRounds 4\u20137:  \n- Condition bids on past win/loss margins; shift toward the most profitable rule.  \n\nRounds 8\u201310:  \n- Exploit best-performing mapping with mild noise.",
+            "Next tests:  \n- For value \u226420: always bid 0\u20132 (heavy shading).  \n- 21\u201350: alternate between bid = value\u221215, value\u221210, and value\u22125.  \n- 51\u201380: mix bid = value\u221210 and value\u22123; occasionally bid value+1 for learning.  \n- >80: try value\u22125 and value\u22121."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            54,
+            72,
+            21
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 40.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 80.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 3.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 40.0
+            }
+        },
+        "profit": [
+            0,
+            32.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Maintain baseline: v\u226460 \u2192 0.7\u20130.75v; v>60 \u2192 0.78\u20130.82v.  \n2. Systematically randomize: 20% of high\u2011v (\u226580) rounds bid \u2248v; 10% bid \u22480.9v.  \n3. For low v<30, sometimes (20%) bid 0\u20130.3v.  \n4. Track opponents\u2019 max/second bids by value range.",
+            "Rounds 2\u20133:  \n- If v \u2264 30: bid \u2248 0.4v \u00b12.  \n- 30 < v \u2264 70: test 0.6v and 0.9v (each once), \u00b13 noise.  \n- v > 70: test v and min(v+8, 99).  \n\nTrack: win rates, average profit by rule, and rivals\u2019 typical bid range.",
+            "Data so far: rivals twice bid 74, one mid (39), one low (13). They seem aggressive when strong.  \n\nNext tests:  \n- v\u226420: bid 0\u20131.  \n- 21\u201345: alternate v\u221218, v\u221212.  \n- 46\u201370: alternate v\u221215, v\u22128, occasional v+1.  \n- 71\u201399: test v\u221212, v\u22125."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            35,
+            62,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 25.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 51.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 50.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 50.0
+            }
+        },
+        "profit": [
+            0,
+            12.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226460 \u2192 bid 0.7v; 60<v<80 \u2192 0.78v; v\u226580 \u2192 0.8v.  \n2. Exploration:  \n   - 20% of v\u226580: bid v or v\u22121.  \n   - 15% of 40\u2264v<60: bid 0.85v.  \n   - 20% of v<30: bid uniformly in [0, 0.5v].",
+            "Rounds 3\u20134:  \n- v \u2264 30: bid 0.35v and 0.5v (each once).  \n- 30 < v \u2264 70: test 0.6v and 0.8v, \u00b12 noise.  \n- v > 70: test v and min(v+5, 99).  \n\nTrack: rivals\u2019 max/second bids and profit per rule.",
+            "Update from data: rivals often bid high (40\u201380+).  \n\nNext tests:  \n- v\u226425: bid 0\u20132.  \n- 26\u201350: mix v\u221218 and v\u221210.  \n- 51\u201375: mix v\u221215, v\u22128, rare v+1.  \n- 76\u201399: test v\u221212 and v\u22125, avoid overbidding value."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            46,
+            99,
+            35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 32.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 20.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 32.0
+            }
+        },
+        "profit": [
+            0,
+            67.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Keep core: v\u226460 \u2192 0.7v; 60<v<80 \u2192 0.78v; v\u226580 \u2192 0.8v.  \n2. Exploration:  \n   - v\u226585: 30% bid v\u22122 to v.  \n   - 40\u2264v\u226460: 20% bid 0.85v.  \n   - v<30: 30% bid 0\u20130.4v.  \n3. Track rivals\u2019 max/second bids by inferred value bands.",
+            "Data so far: rivals often bid high (74 twice; 50 once).  \n\nNext tests (Rounds 4\u20136):  \n- v \u2264 30: bids 0.35v and 0.5v.  \n- 30 < v \u2264 70: alternate 0.6v, 0.75v, 0.9v (\u00b12 noise).  \n- v > 70: test v, v+5, v+10 (capped at 99).",
+            "Data: Rivals frequently bid 40\u201380+, with small shading; overbidding near value can still be profitable.  \n\nNext tests:  \n- v\u226425: bid 0\u20133.  \n- 26\u201345: mix v\u221215, v\u22128.  \n- 46\u201370: mix v\u221210, v\u22123, some v+2.  \n- 71\u201399: mix v\u22128, v\u22122, occasional v+1."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            83,
+            67,
+            12
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 68.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 50.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 1.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 50.0
+            }
+        },
+        "profit": [
+            33.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226460 \u2192 0.7v; 60<v<80 \u2192 0.78v; v\u226580 \u2192 0.82v.  \n2. High\u2011v exploration: v\u226585 \u2192 30% bid v\u22121 to v.  \n3. Mid\u2011v aggression: 40\u2264v\u226460 \u2192 25% bid 0.85v.  \n4. Low\u2011v: v<30 \u2192 30% bid 0\u20130.4v.",
+            "Data so far: rivals\u2019 max bids = 74, 74, 50, 32; second bids often moderate.\n\nNext (Rounds 5\u20137):  \n- v \u2264 30: test 0.35v, 0.5v.  \n- 30 < v \u2264 70: cycle 0.6v, 0.75v, 0.9v (\u00b12).  \n- v > 70: test 0.9v, v\u20135, v (cap 99).",
+            "Round 5+ plan (succinct):\n\n1. v\u226425: bid 0\u20133.  \n2. 26\u201345: alternate v\u221215, v\u22128.  \n3. 46\u201370: alternate v\u221212, v\u22125, rare v+2 (explore).  \n4. 71\u201399: mix v\u221210, v\u22124, rare v+1.  \n5. Adjust shading by margin of loss in future rounds."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            43,
+            29,
+            53
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 10.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 45.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 30.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            23.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226460 \u2192 0.7v; 60<v<80 \u2192 0.78v; v\u226580 \u2192 0.8v.  \n2. High\u2011v (\u226580) exploration: 40% of such rounds bid uniformly in [0.7v, 0.9v].  \n3. Mid\u2011v (40\u201360): 30% bid 0.8\u20130.9v.  \n4. Low\u2011v (<30): 40% bid 0\u20130.3v.",
+            "Rounds 6\u20137:  \n- v \u2264 30: alternate 0.35v and 0.5v.  \n- 30 < v \u2264 70: test 0.7v, 0.8v, and 0.95v (\u00b12 noise), track win margins.  \n- v > 70: test 0.9v and v (cap 99).  \n\nRounds 8\u201310: exploit best-performing rule.",
+            "Data: rivals bid high with light shading; my shading is too heavy, zero wins so far.\n\nNext tests (rounds 6\u20137):\n- v\u226420: bid 0\u20132.\n- 21\u201340: v\u221210.\n- 41\u201360: alternate v\u22128, v\u22124.\n- 61\u201380: alternate v\u22126, v\u22122.\n- 81\u201399: v\u22123, occasional v+1."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            98,
+            67,
+            82
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 93.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 59.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 78.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 78.0
+            }
+        },
+        "profit": [
+            20.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Update baseline: v\u226460 \u2192 0.68v; 60<v<80 \u2192 0.76v; v\u226580 \u2192 0.8v.  \n2. High\u2011v (\u226585): 40% bid 0.9\u20131.0v.  \n3. Mid\u2011v (40\u201360): 35% bid 0.8\u20130.9v.  \n4. Low\u2011v (<30): 50% bid 0\u20130.3v.",
+            "Rounds 7\u20138 (explore):  \n- v \u2264 30: test 0.35v vs 0.55v.  \n- 30 < v \u2264 70: cycle 0.7v, 0.85v, 1.0v (cap 99), \u00b12 noise.  \n- v > 70: test 0.9v, 1.0v, min(v+8, 99).  \n\nRounds 9\u201310 (exploit):  \n- Use highest average-profit rule per value range, with \u00b11 noise.",
+            "Updated strategy tests (rounds 7\u201310):\n\n- v\u226420: always 0\u20132.  \n- 21\u201340: test v\u221212 vs v\u22128.  \n- 41\u201360: center on v\u22126; occasional v\u22123.  \n- 61\u201380: test v\u22125 vs v\u22122.  \n- 81\u201399: v\u22124, rare v at value.  \n- Adjust shading by observed losing margins."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            90,
+            55,
+            97
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 80.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 47.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 95.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 80.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            17.0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226460 \u2192 0.68v; 60<v<80 \u2192 0.76v; v\u226580 \u2192 0.78v.  \n2. High\u2011v (\u226585): 50% bid 0.85\u20130.95v, 10% bid \u2248v.  \n3. Mid\u2011v (40\u201360): 40% bid 0.8\u20130.9v.  \n4. Low\u2011v (<30): 60% bid 0\u20130.25v.",
+            "Rounds 8\u20139 (refine):  \n- v \u2264 30: test 0.35v vs 0.55v.  \n- 30 < v \u2264 70: focus on 0.7v, 0.85v, 1.0v with small noise; log rivals\u2019 second-highest bids.  \n- v > 70: test 0.9v and 1.0v only.  \n\nRound 10: exploit best-performing rule.",
+            "Next-round tests (8\u201310):\n\n- v\u226420: bid 0\u20132.  \n- 21\u201340: mostly v\u221210; occasional v\u22126.  \n- 41\u201360: mix v\u22127, v\u22124.  \n- 61\u201380: mix v\u22126, v\u22123.  \n- 81\u201399: mix v\u22125, v\u22122; never exceed value.  \n- Slightly raise bids after narrow losses."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            59,
+            18,
+            42
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 47.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 6.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 36.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 36.0
+            }
+        },
+        "profit": [
+            23.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "1. Baseline: v\u226460 \u2192 0.68v; 60<v<80 \u2192 0.76v; v\u226580 \u2192 0.8v.  \n2. High\u2011v (\u226585): 50% bid 0.9\u20130.98v, 15% bid v\u2013(v+3).  \n3. Mid\u2011v (40\u201360): 40% bid 0.8\u20130.9v.  \n4. Low\u2011v (<30): 70% bid 0\u20130.2v.",
+            "Rounds 9\u201310 plan:  \n- v \u2264 30: bid 0.35v or 0.5v (alternate).  \n- 30 < v \u2264 70: test 0.7v, 0.9v, and v (cap 99), with \u00b12 noise; favor higher bids when rivals\u2019 second prices <0.8v.  \n- v > 70: bid 0.9v or v.",
+            "Rounds 9\u201310 test plan:\n\n- v\u226420: bid 0\u20132.  \n- 21\u201340: v\u221210.  \n- 41\u201360: mostly v\u22126, occasional v\u22123 when v\u226550.  \n- 61\u201380: mix v\u22125, v\u22123.  \n- 81\u201399: alternate v\u22126, v\u22123.  \n- Slightly increase bids after narrow losses; shade more after easy wins."
+        ]
+    }
+}

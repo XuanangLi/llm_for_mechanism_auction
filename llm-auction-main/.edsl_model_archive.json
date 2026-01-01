@@ -1,11 +1,11 @@
 {
     "metadata": {
         "title": "Model Information Archive",
-        "description": "This archive contains data about available models. Auto-generated on 2025-12-27T15:28:22.505652.",
-        "created_at": "2025-12-27T15:28:22.505652",
+        "description": "This archive contains data about available models. Auto-generated on 2026-01-01T02:05:18.608707.",
+        "created_at": "2026-01-01T02:05:18.608707",
         "fetcher_name": "coop_working"
     },
-    "created_at": "2025-12-27T15:28:22.505652",
+    "created_at": "2026-01-01T02:05:18.608707",
     "data": {
         "anthropic": [
             {
@@ -486,7 +486,7 @@
                 "raw_data": {
                     "id": "mistral.ministral-3-14b-instruct",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 18.8,
                     "usd_per_1M_output_tokens": 75.0
                 },
@@ -916,18 +916,6 @@
             },
             {
                 "service_name": "deep_infra",
-                "id": "deepseek-ai/DeepSeek-OCR",
-                "raw_data": {
-                    "id": "deepseek-ai/DeepSeek-OCR",
-                    "works_with_text": true,
-                    "works_with_images": false,
-                    "usd_per_1M_input_tokens": 0.8,
-                    "usd_per_1M_output_tokens": 2.4
-                },
-                "original_class": "dict"
-            },
-            {
-                "service_name": "deep_infra",
                 "id": "deepseek-ai/DeepSeek-V3",
                 "raw_data": {
                     "id": "deepseek-ai/DeepSeek-V3",
@@ -1100,7 +1088,7 @@
                 "raw_data": {
                     "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 0.08,
                     "usd_per_1M_output_tokens": 0.3
                 },
@@ -1220,7 +1208,7 @@
                 "raw_data": {
                     "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.8,
                     "usd_per_1M_output_tokens": 2.4
                 },
@@ -1680,7 +1668,7 @@
                 "raw_data": {
                     "id": "gemini-robotics-er-1.5-preview",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 10.0,
                     "usd_per_1M_output_tokens": 20.0
                 },
@@ -2898,7 +2886,7 @@
                 "raw_data": {
                     "id": "gpt-5.2",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 1.25,
                     "usd_per_1M_output_tokens": 10.0
                 },
@@ -2910,7 +2898,7 @@
                 "raw_data": {
                     "id": "gpt-5.2-2025-12-11",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 150.0,
                     "usd_per_1M_output_tokens": 600.0
                 },
@@ -3128,7 +3116,7 @@
                 "raw_data": {
                     "id": "gpt-4.1-mini",
                     "works_with_text": true,
-                    "works_with_images": true,
+                    "works_with_images": false,
                     "usd_per_1M_input_tokens": 0.4,
                     "usd_per_1M_output_tokens": 1.6
                 },
@@ -3598,7 +3586,7 @@
                 "raw_data": {
                     "id": "sonar",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 1.0,
                     "usd_per_1M_output_tokens": 1.0
                 },
@@ -3633,7 +3621,7 @@
                 "id": "sonar-reasoning-pro",
                 "raw_data": {
                     "id": "sonar-reasoning-pro",
-                    "works_with_text": true,
+                    "works_with_text": false,
                     "works_with_images": true,
                     "usd_per_1M_input_tokens": 2.0,
                     "usd_per_1M_output_tokens": 8.0
@@ -3744,7 +3732,7 @@
                 "raw_data": {
                     "id": "Qwen/Qwen3-VL-32B-Instruct",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 5.0,
                     "usd_per_1M_output_tokens": 5.0
                 },
@@ -3752,13 +3740,13 @@
             },
             {
                 "service_name": "together",
-                "id": "Qwen/Qwen3-VL-8B-Instruct",
+                "id": "Salesforce/Llama-Rank-V1",
                 "raw_data": {
-                    "id": "Qwen/Qwen3-VL-8B-Instruct",
+                    "id": "Salesforce/Llama-Rank-V1",
                     "works_with_text": true,
-                    "works_with_images": true,
-                    "usd_per_1M_input_tokens": 5.0,
-                    "usd_per_1M_output_tokens": 5.0
+                    "works_with_images": false,
+                    "usd_per_1M_input_tokens": 0.1,
+                    "usd_per_1M_output_tokens": 0.1
                 },
                 "original_class": "dict"
             },
@@ -3972,7 +3960,7 @@
                 "raw_data": {
                     "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
                     "works_with_text": true,
-                    "works_with_images": false,
+                    "works_with_images": true,
                     "usd_per_1M_input_tokens": 5.0,
                     "usd_per_1M_output_tokens": 5.0
                 },

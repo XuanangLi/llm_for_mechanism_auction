@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            93,
+            56,
+            5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 37.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 37.0
+            }
+        },
+        "profit": [
+            56.0,
+            -0.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "Since this is an All-Pay auction, every bid is a sunk cost. My initial goal is to gauge opponent aggression without incurring heavy losses.\n\nFor Round 1, I will test a **High-Threshold Conservative** strategy:\n1.  **If Value < 60:** Bid **$0**. I will conserve capital and observe if Betty or Charles bid irrationally high on unknown values.\n2.  **If Value \u2265 60:** Bid approximately **40% of my value** (e.g., Value 80 $\\rightarrow$ Bid 32).\n\nThis approach minimizes negative expected value while testing if opponents are playing the theoretical equilibrium (which requires very low bids) or overbidding.",
+            "I will adopt a polarized testing phase to gauge opponent aggression in this all-pay auction. For values under $40, I will bid $0 to conserve capital and observe. For strong valuations ($70+), I will test an aggressive stance, bidding approximately 60-75% of my value. This high-risk approach aims to intimidate Andy and Charles early or force them to overpay, revealing their risk tolerance. Based on their responses, I will calibrate my bid-shading ratios in subsequent rounds to exploit any identified timidity or recklessness.",
+            "Given the all-pay auction mechanic, avoiding uncompensated loss is crucial. I will test a conservative baseline to gauge opponent aggression. \n\nIf my value is low (<$50), I will bid $0. This allows me to observe Andy and Betty's behavior without financial risk. \n\nIf my value is high (>$50), I will bid approximately 20% of my value. This low-risk approach tests if opponents are overbidding or leaving room for profit. I need to establish their \"aggression baseline\" before risking significant capital on higher bids."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            92,
+            20,
+            63
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 1.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 25.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 25.0
+            }
+        },
+        "profit": [
+            -1.0,
+            -0.0,
+            38.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents bid 0, implying passivity. I will exploit this with a **Minimalist Sniper** strategy. If Value > 25, I will bid **$1**. If Value \u2264 25, bid **$0**. This secures high-margin wins with negligible risk, testing if opponents remain inactive before increasing expenditure.",
+            "For values under $40, I will bid $0 to minimize risk. For values over $50, I will bid 45-55% of my valuation. This strategy targets the \"missed opportunity\" zone identified in Round 0, aiming to outbid aggressive opponents while securing profit in this all-pay environment.",
+            "I will continue minimizing losses by bidding 0 for values under 60. For values $\\ge 60$, I will bid approximately 40% of my value. This accounts for the aggressive opponent (who bid 37) while ensuring I only risk capital when my potential reward significantly outweighs the bid cost."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            54,
+            72,
+            21
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 27.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 40.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 3.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 40.0
+            }
+        },
+        "profit": [
+            -27.0,
+            32.0,
+            -3.0
+        ],
+        "common": 0,
+        "plan": [
+            "Since one opponent bid 25, low bids are -EV. I will use **Binary Thresholding**. If Value > 40, bid **$27** to beat the known high. If Value \u2264 40, bid **$0**. This strategy eliminates small losses and capitalizes on high-value draws by bidding to win.",
+            "I will bid $0 for values under $55 to avoid all-pay losses. For values $55+, I will bid 50-60% of my valuation. This aggressive stance aims to dominate the opponent who previously bid $25, securing high-value wins while strictly protecting capital on weak hands.",
+            "Opponents bid extremely low (max 1). I will exploit this by drastically reducing my strategy. For values $>10$, I will bid a flat 2-4 to win cheaply. For values $\\le 10$, I will bid 0. This capitalizes on their passivity while minimizing sunk costs."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            35,
+            62,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 28.0
+            }
+        },
+        "profit": [
+            -0.0,
+            34.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "The previous round proved middle bids are fatal. I will use **Polarized Bidding**. If Value > 55, I bid **$42** to beat the observed high of 40. If Value \u2264 55, I bid **$0**. This strategy avoids expensive losses and targets wins only when the margin justifies the risk.",
+            "Bid $0 for values under $50 to minimize risk. For values $50+, I will bid 40-45% of my valuation. This lowers my ratio to reduce the winning margin (previously $13) while remaining high enough to beat the opponent who bid $27, optimizing profit against conservative players.",
+            "Opponents are bidding high (up to 40), making low speculative bids costly. I will switch to a strict threshold strategy: Bid 0 for any value under 60 to conserve capital. For values $\\ge 60$, I will bid aggressively (approx. Value - 15) to overcome their established range."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            46,
+            99,
+            35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 32.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 2.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 32.0
+            }
+        },
+        "profit": [
+            14.0,
+            -2.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents are bidding conservatively with a max observed bid of 28. I will exploit this by lowering my engagement threshold. If Value > 45, I will bid **$32** to beat the current winning standard. If Value \u2264 45, I bid **$0** to completely avoid the all-pay risk.",
+            "Given opponents' zero bids, I will aggressively lower bids to exploit passivity. For values >$50, I'll bid $1-$5 to win cheaply. For values <$50, I'll bid $0. This minimizes wasted capital while testing if opponents remain dormant.",
+            "Missed profit confirms the 60-threshold was too conservative. I will lower the entry threshold to 40. For values $\\ge 40$, I will bid aggressive proportional amounts (approx. $0.5 \\times \\text{Value}$) to challenge the 20-30 winning range. Values $<40$ remain 0 to minimize risk."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            83,
+            67,
+            12
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 4.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 4.0
+            }
+        },
+        "profit": [
+            79.0,
+            -0.0,
+            -0.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents are extremely passive (max bid 2), causing massive overpayment. I will switch to a low-ball sniper strategy to maximize margins. If Value > 10, I bid **$4** to cheaply secure the win. If Value \u2264 10, I bid **$0** to avoid waste.",
+            "Opponents are active (bid of 32). I must pivot. For values >75, I will bid aggressively (35-45) to guarantee the win and capture the high margin against the active bidder. For values <75, I will bid 0 to avoid bleeding chips in this all-pay format. No more lowballing high values.",
+            "[ERROR: Could not extract text. Raw response: {'sdk_http_response': {'headers': {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Thu, 01 Jan 2026 08:17:02 GMT', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Server-Timing': 'gfet4t7; dur=20840', 'Alt-Svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', 'Transfer-Encoding': 'chunked'}, 'body': None}, 'candidates': [{'content': {'parts': None, 'role': None}, 'citation_metadata': None, 'finish_message': None, 'token_count': None, 'finish_reason': 'MAX_TOKENS', 'avg_logprobs': None, 'grounding_metadata': None, 'index': 0, 'logprobs_result': None, 'safety_ratings': None, 'url_context_metadata': None}], 'create_time': None, 'model_version': 'gemini-3-pro-preview', 'prompt_feedback': None, 'response_id': 'fi1WaaT_EqGUmtkPh8unoQs', 'usage_metadata': {'cache_tokens_details': None, 'cached_content_token_count': None, 'candidates_token_count': None, 'candidates_tokens_details': None, 'prompt_token_count': 663, 'prompt_tokens_details': [{'modality': 'TEXT', 'token_count': 663}], 'thoughts_token_count': 2045, 'tool_use_prompt_token_count': None, 'tool_use_prompt_tokens_details': None, 'total_token_count': 2708, 'traffic_type': None}, 'automatic_function_calling_history': [], 'parsed': None}]"
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            43,
+            29,
+            53
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 1.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 7.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 7.0
+            }
+        },
+        "profit": [
+            -1.0,
+            -0.0,
+            46.0
+        ],
+        "common": 0,
+        "plan": [
+            "[ERROR: Could not extract text. Raw response: {'sdk_http_response': {'headers': {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Thu, 01 Jan 2026 08:18:00 GMT', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Server-Timing': 'gfet4t7; dur=20891', 'Alt-Svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', 'Transfer-Encoding': 'chunked'}, 'body': None}, 'candidates': [{'content': {'parts': None, 'role': None}, 'citation_metadata': None, 'finish_message': None, 'token_count': None, 'finish_reason': 'MAX_TOKENS', 'avg_logprobs': None, 'grounding_metadata': None, 'index': 0, 'logprobs_result': None, 'safety_ratings': None, 'url_context_metadata': None}], 'create_time': None, 'model_version': 'gemini-3-pro-preview', 'prompt_feedback': None, 'response_id': 'ty1WaYv0OOesqtsPlbaSmQ4', 'usage_metadata': {'cache_tokens_details': None, 'cached_content_token_count': None, 'candidates_token_count': None, 'candidates_tokens_details': None, 'prompt_token_count': 650, 'prompt_tokens_details': [{'modality': 'TEXT', 'token_count': 650}], 'thoughts_token_count': 2045, 'tool_use_prompt_token_count': None, 'tool_use_prompt_tokens_details': None, 'total_token_count': 2695, 'traffic_type': None}, 'automatic_function_calling_history': [], 'parsed': None}]",
+            "Opponents are bidding surprisingly low (winning bid 4). I must exploit this softness. I will lower my engagement threshold: for values 60-80, I will bid 6-11 to steal wins. For values >80, I will bid 15-20. Below 60, I bid 0 to minimize all-pay risk.",
+            "Opponents are bidding extremely low (winning with 4). I will exploit this conservatism. If my value is >15, I will place a small speculative bid (6-10) to steal the win cheaply. If my value is low, I will bid 0 to avoid all-pay losses."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            98,
+            67,
+            82
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 15.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 20.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 3.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 20.0
+            }
+        },
+        "profit": [
+            -15.0,
+            47.0,
+            -3.0
+        ],
+        "common": 0,
+        "plan": [
+            "Opponents bid surprisingly low (max 7) last round. I will exploit this weakness. If my value is moderate-to-high (>40), I will bid slightly above their previous max (range 8-15) to snatch a cheap win. If my value is low, I will bid 0 to minimize risk.",
+            "Opponents are bidding very low. I will test aggressive sniping on moderate values. If Value > 25, I bid 8-12 to beat their conservative cap. For Value > 60, I bid 18-22 to guarantee wins. I will only fold (bid 0) on values < 25.",
+            "Opponents are extremely passive (bids 0-1). I will lower my bid to 2 or 3 if my Value > 10 to clear their range cheaply. If Value < 10, I bid 0. This minimizes overpayment while capitalizing on their refusal to engage."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            90,
+            55,
+            97
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 17.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 35.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 35.0
+            }
+        },
+        "profit": [
+            -30.0,
+            -17.0,
+            62.0
+        ],
+        "common": 0,
+        "plan": [
+            "My passivity wasted a 98 value. I will switch to a polarized strategy: bid 0 for values under 60 to avoid sunk costs. For values over 60, I will bid aggressively (22-35) to surpass the recent winning bid of 20 and secure the prize.",
+            "Opponents cap bids near 15. I will exploit this low ceiling. If Value < 30, bid 0 to avoid sunk costs. If Value >= 30, bid 16-19 to marginally beat their max. This secures wins against conservative play without overpaying.",
+            "Opponents are active (bids 15-20), debunking the passive theory. In all-pay auctions, small bids are wasteful. I will polarize: if Value > 40, I bid aggressively (22-35) to surpass their range. If Value < 40, I bid 0. This avoids sunk costs on losing hands."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            59,
+            18,
+            42
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 0.0
+            }
+        },
+        "profit": [
+            -0.0,
+            -0.0,
+            42.0
+        ],
+        "common": 0,
+        "plan": [
+            "Bidding 30 with high value caused a significant loss. I will enforce a strict polarized strategy: bid 0 for values under 65 to preserve capital. For values over 65, I will bid aggressively (36-45) to decisively beat the recent 35 high bid and secure the prize.",
+            "Opponents escalated to 30-35, breaking the low-cap theory. I must polarize to stop bleeding. If Value < 50, bid 0. If Value \u2265 50, I will place an aggressive bid of 36-42 to clear their new high-water mark. Middle bids are fatal here.",
+            "Opponents consistently bid up to 30. I will refine the polarized approach: strictly bid 0 for Value < 45. For Value > 45, I will bid 32-37 to reliably top their range without excessive waste. This maximizes expected value against their observed upper limit."
+        ]
+    }
+}

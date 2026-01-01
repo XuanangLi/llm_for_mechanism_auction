@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            93,
+            56,
+            5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 98.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 61.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 10.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 10.0
+            }
+        },
+        "profit": [
+            83.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My plan is to explore a few strategies:\n\n1.  **Aggressive Bidding:** Bid slightly above my perceived value (e.g., value + 5) to test if I can win more auctions and gather data on the impact of paying more.\n2.  **Conservative Bidding:** Bid slightly below my value (e.g., value - 5) to see if I can secure profit even when losing, and observe how others react to my lower bids.\n3.  **Randomized Bidding:** Introduce a small random element to my bid (e.g., value +/- 2) to observe if it can disrupt opponents' patterns and create opportunities.",
+            "Round 11 Plan:\n\n*   **Strategy 1: Aggressive Value Exploration:** Bid my value + $5 (capped at $99). This aims to win higher-value items and gather data on how others react to slightly overbidding.\n*   **Strategy 2: Cautious Observation:** Bid my value - $2 (minimum $0). This is a defensive strategy to see if lower bids can still win when values are low, and to observe opponents' tendencies.\n*   **Strategy 3: Mid-Range Guess:** Bid $50. This is a neutral bid to see if it can snag a prize if my value is moderate, or to gauge reactions to a consistent, non-personalized bid.",
+            "Round 11 Plan:\n\nGiven the independent redraws, I'll continue aggressive exploration. I'll bid my value plus a small premium ($V+5$) to test for aggressive opponents. If Andy or Betty bid significantly higher than their values, I'll adjust my strategy in subsequent rounds to either match their aggression or exploit their overbidding by bidding closer to my value. I will also observe if any bidder consistently bids low."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            92,
+            20,
+            63
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 94.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 24.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 73.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 24.0
+            }
+        },
+        "profit": [
+            68.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My plan is to test bidding at value + 2, value - 2, and value +/- 3. This will help understand the impact of small aggressive and conservative bids, and introduce controlled randomness to observe opponent reactions and potential profit gains.",
+            "Round 11 Plan:\n\n*   **Strategy 1: Value-Plus Bid:** Bid my value + $4 (max $99).\n*   **Strategy 2: Value-Minus Bid:** Bid my value - $3 (min $0).\n*   **Strategy 3: Fixed Mid-Bid:** Bid $60.\n\nAnalysis: Last round's high bids suggest a need to bid higher. These strategies explore aggressive bidding and observe reactions.",
+            "Round 11 Plan: Bid $V+10$. If I win, I'll aim to capture value. If I lose, I'll analyze if opponents overbid significantly, informing future bids closer to my value to maximize profit."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            54,
+            72,
+            21
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 55.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 82.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 68.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 55.0
+            }
+        },
+        "profit": [
+            0,
+            17.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My plan is to bid my value, value + 1, and value - 1. This will help determine the optimal bid around my value and see if a slightly lower bid still secures a win, maximizing profit.",
+            "Round 11 Plan:\n*   **Strategy 1: Aggressive Value Bid:** Bid my value + $10 (max $99).\n*   **Strategy 2: Conservative Value Bid:** Bid my value - $5 (min $0).\n*   **Strategy 3: Random Bid:** Bid a random value between $30 and $70.\n\nAnalysis: Explore aggressive bidding to win, and conservative bidding to test profit margins. Random bids provide further data.",
+            "My value is 63. Last round, bidding 73 was too high. I will bid $V+5$ (68) this round. This is a more conservative approach to test if winning with a smaller profit margin is achievable, or if I can learn more about opponent's bidding tendencies."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            35,
+            62,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 76.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 68.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 67.0
+            }
+        },
+        "profit": [
+            -32.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. If I win, profit is 76 - third_highest. If I lose, profit is unchanged. This strategy aims to win when profitable and observe outcomes.",
+            "Round 11 Plan:\n*   **Strategy 1: Targeted Aggression:** Bid value + $5 (max $99). Aims to win while minimizing overpayment.\n*   **Strategy 2: Data Gathering Bid:** Bid value - $10 (min $0). Tests how low I can bid and still win.\n*   **Strategy 3: Middle Ground:** Bid value.",
+            "My value is 63. Last round's aggressive bid of 73 was too high. I will bid $V+5$ (68) to test a more conservative strategy and observe opponent reactions. This aims to balance winning chances with profit margin."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            46,
+            99,
+            35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 46.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 73.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 46.0
+            }
+        },
+        "profit": [
+            0,
+            53.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. If I win, profit is 76 - third_highest. If I lose, profit is unchanged. This strategy aims to win when profitable and observe outcomes.",
+            "Round 11 Plan:\n*   **Strategy 1: Aggressive Value Bid:** Bid value + $10 (max $99). Seeks to win higher value prizes.\n*   **Strategy 2: Conservative Data Bid:** Bid value - $5 (min $0). Explores lower bid effectiveness.\n*   **Strategy 3: Baseline Bid:** Bid value.",
+            "My value is 63. Last round's aggressive bid of 68 was too low. I will bid $V+10$ (73) to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            83,
+            67,
+            12
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 83.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 73.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 67.0
+            }
+        },
+        "profit": [
+            16.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. If I win, profit is 76 - third_highest. If I lose, profit is unchanged. This strategy aims to win when profitable and observe outcomes.",
+            "Round 11 Plan:\n*   **Strategy 1: Value Bid:** Bid my value.\n*   **Strategy 2: Aggressive Bid:** Bid value + $5 (max $99).\n*   **Strategy 3: Conservative Bid:** Bid value - $5 (min $0).\nAnalyzing profit calculation is crucial.",
+            "My value is 63. Last round's aggressive bid of 73 was too low. I will bid $V+10$ (73) to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            43,
+            29,
+            53
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 43.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 63.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 43.0
+            }
+        },
+        "profit": [
+            0,
+            -14.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. This strategy aims to win when profitable and observe outcomes. I will continue to bid my value to maximize profit and gather data on other bidders' behavior.",
+            "Round 11 Plan:\n*   **Strategy 1: Value Bid:** Bid my value (67).\n*   **Strategy 2: Aggressive Bid:** Bid value + $10 (77).\n*   **Strategy 3: Adaptive Bid:** Bid slightly above the highest previous bid if my value is high.",
+            "My value is 63. Last round's bid was too low. I will bid $V+10 = 73$ to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            98,
+            67,
+            82
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 70.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 67.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 73.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 67.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            15.0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 70. This is a slight reduction from my value to test if I can win profitably while saving some margin. I will observe if this leads to wins or losses and adjust accordingly.",
+            "Round 11 Plan:\nTest Strategy 1: Bid value (29).\nTest Strategy 2: Bid value + 10 (39).\nTest Strategy 3: Bid slightly above previous third-highest bid (44).\nFocus on bids closer to my value to ensure profit.",
+            "My value is 63. Last round's bid was too low. I will bid $V+10 = 73$ to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            90,
+            55,
+            97
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 76.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 44.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 97.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 44.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            53.0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. Full value bid to ensure winning when my value is high. Observe if this yields profit or loss and adjust.",
+            "Round 11 Plan:\nTest Strategy 1: Bid value (29).\nTest Strategy 2: Bid value + 10 (39).\nTest Strategy 3: Bid slightly above previous third-highest bid (44).\nFocus on bids closer to my value to ensure profit.",
+            "My value is 63. Last round's bid was too low. I will bid $V+10 = 73$ to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            59,
+            18,
+            42
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 76.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 45.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 73.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 45.0
+            }
+        },
+        "profit": [
+            14.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My value is 76.\nPlan: Bid 76. This is a full value bid. I will observe if winning at full value is profitable given the third-highest bid. If not, I will consider bidding lower in future rounds.",
+            "Round 11 Plan:\nTest Strategy 1: Bid value - 10 (45).\nTest Strategy 2: Bid value (55).\nTest Strategy 3: Bid value + 10 (65).\nFocus on bidding closer to my value to capture potential wins.",
+            "My value is 63. Last round's bid was too low. I will bid $V+10 = 73$ to test a more aggressive strategy and observe opponent reactions, aiming to secure the win and a potentially higher profit."
+        ]
+    }
+}

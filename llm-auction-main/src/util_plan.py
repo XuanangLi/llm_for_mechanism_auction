@@ -42,7 +42,13 @@ class Rule_plan:
         self.ascend_descend = ascend_descend
         self.private_value = private_value
         self.open_blind = open_blind
-        self.price_order = price_order
+        # Normalize price_order for compatibility with different spellings in configs/docs.
+        # Canonical internal values: first, second, third, allpay
+        normalized_price_order = str(price_order).strip().lower()
+        normalized_price_order = normalized_price_order.replace("-", "").replace("_", "").replace(" ", "")
+        if normalized_price_order in {"allpay", "allpaid"}:
+            normalized_price_order = "allpay"
+        self.price_order = normalized_price_order
         self.round = rounds
         self.turns = turns
         self.common_range = common_range
@@ -139,22 +145,26 @@ class SealBid():
         return f'Sealed Bid Auction: (bid_list={self.bid_list})'
     
     def parse_bid(self, text):
-        ##  <BID>20<\BID>
-        pattern = r"<BID>.*?(\d+).*?<\\?BID>"
-        ##  <BID>20</BID>
-        match = re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL)
-        
-        if match:
-            try:
-                # Extract and convert the matched bid value to float
-                quantity = float(match.group(1).strip())
-                return quantity
-            except ValueError:
-                # Handle cases where the value isn't a valid number
-                raise ValueError("Invalid bid value")
-        else:
-            # Return a message if no valid match is found
-            raise ValueError("Invalid bid value")
+        if text is None:
+            raise ValueError("Missing bid text")
+
+        # Accept both canonical closing tag </BID> and the older <\\BID> variant.
+        # Also allow whitespace and floats.
+        pattern = (
+            r"<\s*BID\s*>\s*"
+            r"([0-9]+(?:\.[0-9]+)?)"
+            # Accept: </BID>, <\BID>, or (common model mistake) a repeated <BID>
+            r"\s*(?:</\s*BID\s*>|<\s*\\\s*BID\s*>|<\s*BID\s*>)"
+        )
+        match = re.search(pattern, str(text), flags=re.IGNORECASE | re.DOTALL)
+
+        if not match:
+            raise ValueError("Invalid bid format. Expected <BID>number</BID>.")
+
+        try:
+            return float(match.group(1))
+        except ValueError as e:
+            raise ValueError("Invalid bid value") from e
 
     
     def run(self):
@@ -199,8 +209,12 @@ class SealBid():
                             question_name="q_bid",
                             question_text=general_prompt + prompt_elicit_bid + format_warning
                         )
-                        result = self.model.simple_ask(q_bid)
-                        bid_str= result['choices'][0]['message']['content']
+                        survey = Survey(questions=[q_bid])
+                        result = survey.by(self.model).run(
+                            remote_inference_description="check remote reuse",
+                            remote_inference_visibility="public",
+                        )
+                        bid_str = result.select("q_bid").to_list()[0]
                         print(bid_str)
                         bid = self.parse_bid(bid_str)
                         break  # Exit loop if bid is successfully processed
@@ -225,14 +239,19 @@ class SealBid():
                     question_name = "q_counterfact",
                     question_text = general_prompt+ prompt_reflection
                 )
-                result = self.model.simple_ask(q_counterfact)
-                counterfact= result['choices'][0]['message']['content']
+                survey = Survey(questions=[q_counterfact])
+                result = survey.by(self.model).run(
+                    remote_inference_description="check remote reuse",
+                    remote_inference_visibility="public",
+                )
+                counterfact = result.select("q_counterfact").to_list()[0]
                 # print("=========================== \n", counterfact)
                 
                 history = agent.history
                 reasoning = agent.reasoning
-                max_length = max(len(history), len(reasoning))
-                history_prompt = ''.join([history[i] +" your plan for this round is: "+ reasoning[i] if i < len(history) and i < len(reasoning) else history[i] if i < len(history) else reasoning[i] for i in range(max_length)])
+                last_history = history[-1] if history else ""
+                last_reasoning = reasoning[-1] if reasoning else ""
+                history_prompt = f"{last_history} your plan for this round is: {last_reasoning}"
                 # previous_plan = agent.reasoning[-1]
                 elicit_plan = Prompt.from_txt(os.path.join(prompt_dir,"plan_after_reflec.txt"))
                 prompt_elicit_plan = str(elicit_plan.render({"history": history_prompt, "counterfact":counterfact}))

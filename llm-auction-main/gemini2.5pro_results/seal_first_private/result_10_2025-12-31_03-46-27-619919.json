@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            93,
+            56,
+            5
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 62.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 37.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 3.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 62.0
+            }
+        },
+        "profit": [
+            31.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My plan is to use the initial rounds for strategic exploration to model my opponents' behavior.\n\n1.  **Establish a Baseline:** I will start by bidding the theoretically optimal amount for three rational bidders: 2/3 of my value. This will serve as a control group for my experiments.\n\n2.  **Aggressive Probing:** I will test an aggressive strategy by bidding ~85% of my value, especially on mid-to-high values. This aims to secure wins to gather data on my opponents' bidding ranges and test if they are bidding timidly.\n\nAfter these initial rounds, I will analyze their patterns and adapt my strategy to exploit any predictable behavior.",
+            "My plan is to start with a theoretically sound strategy and adapt based on my opponents' behavior.\n\n**Phase 1: Exploration (Rounds 1-3)**\nI will begin by bidding the Nash Equilibrium strategy: approximately 67% of my value. This provides a solid baseline. To gather data, I will test one more aggressive bid (~80% of my value) and one more conservative bid (~50%) to quickly learn if my opponents are over- or under-bidding.\n\n**Phase 2: Adaptation (Rounds 4-10)**\nI will analyze the bidding history to model my opponents. If they bid passively, I will lower my bids to increase my profit margin. If they are aggressive, I will bid more competitively, especially on high-value items, to secure profitable wins.",
+            "My plan is to systematically probe my opponents' strategies by varying my bid-to-value ratio across the initial rounds.\n\n1.  **Baseline:** I'll begin by bidding the theoretical optimum, approximately 2/3 of my value. This establishes a benchmark for rational play.\n2.  **Aggressive Probe:** Next, I will bid more aggressively, around 85% of my value. This tests my opponents' upper bidding limits and helps me win auctions to gather data, even at a lower profit margin.\n3.  **Conservative Probe:** I will then bid conservatively, around 50% of my value, to see if I can secure wins with high profit margins.\n\nBased on these results, I will model my opponents and adapt my strategy to bid just enough to win."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            92,
+            20,
+            63
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 55.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 16.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 54.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 55.0
+            }
+        },
+        "profit": [
+            37.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My opponents' low bids suggest they are conservative. I will test this by bidding less aggressively. For any value above $50, I will bid around 50-60% of my value. This experiment aims to confirm their passivity and capture a much larger profit margin on future wins.",
+            "As part of my exploration phase, I will test an aggressive strategy. I plan to bid approximately 80% of my value this round. This will test if I can outbid the opponent who bid rationally last round (~67%) and see how they react to a more assertive bidding style.",
+            "Based on one opponent's rational 2/3 bid, I will now test an aggressive strategy. I plan to bid ~85% of my value to increase my chances of winning. This probe aims to reveal the second-highest bid, testing my opponents' upper limits to better model their behavior."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            54,
+            72,
+            21
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 27.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 58.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 15.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 58.0
+            }
+        },
+        "profit": [
+            0,
+            14.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My opponents seem conservative. I will test this further by bidding more aggressively to find their bid ceiling. For any value over $70, I will bid a lower percentage, around 45-55% of my value. This is a calculated risk to gather data and achieve a higher profit margin.",
+            "My opponents bid very competitively last round. To test their upper limits and gather data, I will bid aggressively at 80% of my value. This should reveal if they are consistently high bidders or if they adjust their strategy based on perceived aggression from others.",
+            "My 86% bid was aggressive but still lost by a small margin to a bidder who seemed to bid more conservatively relative to their high value. I will now test a 'rational-plus' strategy, bidding ~70% of my value to slightly outbid a theoretical 2/3 bidder and capture profitable wins."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            35,
+            62,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 12.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 31.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 41.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 41.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            17.0
+        ],
+        "common": 0,
+        "plan": [
+            "My opponents' bidding is mixed: one bids aggressively (~80% of their value), while the other is passive. I'll adopt a tiered strategy based on my value.\nHigh value (>$70): Bid aggressively, ~80%, to secure the win.\nMid-value ($40-70): Bid moderately, ~65%.\nLow value (<$40): Bid low.",
+            "My opponents bid very low last round, causing me to overpay. I will correct this by testing a much more conservative strategy: bidding 50% of my value. This will test if their low bidding is a consistent pattern and aims to secure a win with a higher profit.",
+            "My previous strategies of bidding a fixed high percentage have failed. I will now test a value-dependent strategy. If my value is high (>$70), I'll bid aggressively (~85%) to win. If my value is low (<$40), I'll bid very conservatively (~50%) to avoid overpaying and gather data."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            46,
+            99,
+            35
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 30.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 66.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 21.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 66.0
+            }
+        },
+        "profit": [
+            0,
+            33.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My tiered strategy is sound, but needs refinement. I've observed one opponent bidding around 70% of their value. To counter this and test profitability at different levels, I'll formalize my tiers:\n*   High value (>$75): Bid 75%.\n*   Mid-value ($40-$75): Bid 65%.\n*   Low value (<$40): Bid 35%.",
+            "My 50% bid was too conservative, as the winner bid ~70% of their value. I will test a more aggressive strategy based on game theory and this observation. My new plan is to bid two-thirds (67%) of my value to better capitalize on high-value hands and increase my win rate.",
+            "My opponents are bidding conservatively, and I overpaid significantly. I will test a more aggressive shading strategy based on this learning. My plan is to bid approximately 60% of my value. This is a direct test to capture more profit on winning bids against seemingly cautious opponents."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            83,
+            67,
+            12
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 66.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 34.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 8.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 66.0
+            }
+        },
+        "profit": [
+            17.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My tiered strategy is sound, but I must be more aggressive to win high-value auctions. I will increase my bid for values over $75 from 75% to 80% of my value. This targets the opponent bidding a high percentage, aiming to secure large profits while remaining cautious with lower values.",
+            "My 67% bid was far too aggressive against conservative opponents, causing a massive overpayment. I will now test a more cautious strategy by bidding 50% of my value. This should still secure wins on high-value items while drastically improving my profit margin by exploiting their apparent passivity.",
+            "The winner bid 2/3 of their value, a theoretically optimal strategy. I will adopt a similar, more aggressive approach. My new plan is to bid 67% of my value. This should allow me to compete more effectively for high-value prizes while still maintaining a healthy profit margin."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            43,
+            29,
+            53
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 3.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 37.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 37.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            16.0
+        ],
+        "common": 0,
+        "plan": [
+            "My analysis shows I overpaid significantly due to my opponents' conservative bidding. To exploit this, I will test a much lower bid percentage. My new strategy is to bid 65% of my value. This should drastically increase my profit margin on wins while still beating their lower bids.",
+            "My opponents' bidding is inconsistent. I will test a tiered strategy based on my value. For high values (>80), I'll bid an aggressive 70% to secure the win. For mid-range values (40-80), I\u2019ll bid a moderate 55%. For low values (<40), I'll bid minimally to gather data.",
+            "The last winner bid very aggressively (~80% of value), far above the theoretical optimum of ~67%. I will test a cautiously aggressive strategy by bidding 70% of my value. This aims to beat bidders using the optimal strategy while leaving a larger profit margin than the previous round's winner."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            98,
+            67,
+            82
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 83.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 44.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 49.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 83.0
+            }
+        },
+        "profit": [
+            15.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My conservative 65% bid strategy failed, costing me a win. Last round's winner bid around 70% of their value. To be more competitive, I must increase my bid. My new strategy is to test a more aggressive approach by bidding approximately 85% of my value this round.",
+            "Based on the last round, one opponent bid approximately 70% of their value. My previous mid-range plan of 55% is too conservative. I will adjust my tiered strategy: for values between $40-$80, I will now bid a more competitive 65%. For high values, I will maintain 70%.",
+            "My last bid of ~70% was too aggressive, leaving significant profit on the table. This round, I will test a more conservative strategy, bidding 60% of my value. This aims to exploit my opponents' apparent low bidding and maximize my profit margin on any wins."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            90,
+            55,
+            97
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 59.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 37.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 78.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 78.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            19.0
+        ],
+        "common": 0,
+        "plan": [
+            "My last winning bid was a massive overpayment, revealing my opponents are bidding conservatively. I will abandon my aggressive plans. This round, I'll test a more conservative strategy by bidding approximately 65% of my value. This should secure wins with high values while maximizing my profit margin.",
+            "My analysis shows one opponent is extremely aggressive, bidding ~85% of their high value. My current strategy, while safe, is too conservative to win against them. To test a counter-strategy, if my value is high (>$85), I will bid a more aggressive 78% to try and win profitably.",
+            "The last round's winner bid a very high 85% of their value. My conservative bids are consistently losing. To win, I must be more aggressive. This round, I will test bidding around 80% of my value, especially if my value is high, to challenge the aggressive bidder."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            59,
+            18,
+            42
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 47.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 9.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 28.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 47.0
+            }
+        },
+        "profit": [
+            12.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My conservative 65% bid on a high value failed. An opponent won by bidding approximately 80% of their value. This round, I will adopt a more aggressive strategy, bidding around 80% of my value to challenge competitors and secure profitable wins I previously missed.",
+            "Opponents are extremely aggressive, making my conservative bids ineffective. I must adapt to win. This round, I'll test a tiered aggressive strategy: if my value is over $65, I will bid 75% of my value to be competitive. If my value is below $65, I'll bid 50%.",
+            "My last win was inefficient due to a massive overbid. To correct this, I will test a more conservative strategy based on theoretical auction models. I will bid approximately two-thirds of my value, aiming to win by a smaller margin and thus maximize my profit when I do win."
+        ]
+    }
+}

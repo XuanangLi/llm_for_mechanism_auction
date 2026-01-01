@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            79,
+            83,
+            2
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 79.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 83.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 17.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 79.0
+            }
+        },
+        "profit": [
+            0,
+            4.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "My initial plan focuses on systematic data gathering to maximize long-run profit.\n\n1.  **Baseline (Rounds 1-3):** Bid my true value (V). This establishes a profit baseline and allows me to observe opponents' typical bid ranges and win rates without my strategy influencing their behavior.\n2.  **Aggressive Probe (Rounds 4-6):** Next, bid",
+            "My next strategy will involve a phased approach to gather crucial data. First, I'll bid my exact value (V) for 2 rounds to establish a baseline and observe opponent bidding patterns. Next, I'll implement an aggressive strategy, bidding V+5 to V+10 for 3 rounds, specifically when my value is high (>60), to test opponents' upper bid limits and willingness to overbid. Finally, I'll explore a conservative approach, bidding V-5 to V-10 for 3 rounds, particularly with lower values (<40), to identify opportunities for low-cost wins. This data will inform a dynamic, profit-maximizing strategy.",
+            "For the next 10 rounds, I will systematically explore opponent bidding patterns to maximize long-term profit.\n\n**Rounds 1-4:** I will aggressively bid `min(Value + 15, 99)`. This strategy aims to maximize wins, revealing opponents' bid ceilings and typical winning thresholds across various value ranges. This is crucial for gathering extensive data on their competitive behavior.\n\n**Rounds 5-8:** I will then shift to conservatively bidding `max(Value - 15, 0)`. This will identify profitable underbidding opportunities and assess opponents' willingness to win at lower prices, providing insights into their minimum acceptable profit margins.\n\n**Rounds 9-10:** I will analyze all collected data to adapt. If opponents bid conservatively, I'll bid `Value` for high values. If they bid aggressively, I'll adjust to `Value - X` to secure profit or `Value + Y` strategically to win critical high-value rounds."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            64,
+            5,
+            45
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 69.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 4.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 60.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 60.0
+            }
+        },
+        "profit": [
+            4.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Given Round 0's outcome, I'll shift from bidding V. For Rounds 1-3, I will bid V+5 to aggressively probe winning conditions and opponent bid ranges, prioritizing data on profitable wins. This gathers crucial information for long-term profit maximization.",
+            "I will test bidding V-1 for the next two rounds to maximize profit while securing wins, based on Round 0. Then, I'll implement aggressive (V+5 to V+10 for V>60) and conservative (V-5 to V-10 for V<40) strategies to explore opponent limits and identify low-cost opportunities.",
+            "Continue with the planned aggressive strategy for Rounds 1-4: bid `min(Value + 15, 99)`. This will gather crucial data on opponent winning thresholds and value distributions, even if it means accepting short-term losses for long-term strategic insight, as observed in Round 0."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            98,
+            74,
+            7
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 84.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 22.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 84.0
+            }
+        },
+        "profit": [
+            14.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "For R2-3, I will bid V+2. This refines the aggressive probe, aiming for consistent profitable wins while minimizing overpayment based on R1's lesson. This gathers data on a more efficient aggressive margin.",
+            "I will now test aggressive bidding (V+5 to V+10) for 2 rounds when my value is high (>60) to probe opponent limits. Then, I'll explore conservative bids (V-5 to V-10) for 2 rounds with low values (<40) to identify low-cost wins. This will provide critical data for dynamic profit maximization.",
+            "Continue aggressive bidding (`min(Value + 15, 99)`) for Rounds 2-4 to gather comprehensive data on opponent winning thresholds, prioritizing data collection over immediate profit. Afterwards, I will shift to conservative and adaptive strategies as originally planned for Rounds 5-10."
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            33,
+            63,
+            32
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 33.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 73.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 47.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 47.0
+            }
+        },
+        "profit": [
+            0,
+            16.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "For R3, I will bid my true value (V). This directly tests the R2 analysis that V would have been equally effective, providing a crucial baseline for efficient winning. It gathers data on opponents' willingness to bid above my value.",
+            "I will complete the aggressive bidding phase (V+5 to V+10 for V>60) for one more round to fully test opponent limits. Subsequently, I'll shift to conservative bids (V-5 to V-10 for V<40) for two rounds, aiming to identify low-cost win opportunities and gather data on opponent behavior at lower values.",
+            "Continue aggressive bidding (`min(Value + 15, 99)`) for Rounds 3-4 as planned. This will further gather data on opponent bid ceilings and winning thresholds, crucial for later adaptive strategies, despite not winning recent rounds. The focus remains on extensive data collection."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            31,
+            74,
+            86
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 32.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 76.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 76.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            10.0
+        ],
+        "common": 0,
+        "plan": [
+            "For R4-5, I will implement conditional bidding: If my value (V) is above 50, I will bid V+5. If V is 50 or below, I will bid V+1. This strategy aims to maximize profitable wins across different value ranges while avoiding losses on low-value items.",
+            "Adjusting from Round 3, I'll bid V+2 (for V>60) for two rounds to win efficiently without overbidding. Next, I'll test V-5 (for V<40) for two rounds to find low-cost wins. This balances winning with profit maximization, gathering data on opponent thresholds across value ranges.",
+            "Complete aggressive data collection (Value + 15) for Round 4. This phase, despite losses, confirms high opponent bids. Next, I will shift to conservative bidding (Value - 15) for Rounds 5-8 to identify profitable underbidding opportunities, adapting to observed opponent aggression."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            6,
+            15,
+            80
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 6.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 10.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 65.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 10.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            70.0
+        ],
+        "common": 0,
+        "plan": [
+            "For R5-R7, I'll refine conditional bidding: If V > 60, bid V+5 to aggressively secure high-profit wins. If 30 <= V <= 60, bid V+2 for moderate profit probing. If V < 30, bid V to only win low-value items if highly profitable, avoiding losses.",
+            "I will complete the V+2 strategy (for V>60) for one more round to confirm its efficacy. Then, I'll test bidding V-5 (for V<40) for two rounds to identify low-cost wins and gather data on opponent behavior at lower values, balancing profit and data collection.",
+            "Transition to conservative bidding (`max(Value - 15, 0)`) for Rounds 5-8. This tests opponents' lower bid thresholds, seeking efficient wins and identifying profitable underbidding opportunities, leveraging insights from previous rounds about avoiding unnecessary overbidding."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            20,
+            3,
+            24
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 25.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 28.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 9.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 25.0
+            }
+        },
+        "profit": [
+            0,
+            -22.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "For R6-R7, I will implement a refined conditional strategy. If V > 60, bid V+5. If 30 <= V <= 60, bid V+3. If V < 30, bid V+5. This aggressively probes opponent bids across all value ranges, prioritizing data for long-term profit maximization.",
+            "For high values (>60), I'll bid V+5 for one round to secure profitable wins. For low values (<40), I'll test bidding V+25 for two rounds, aiming to win and profit from lower second bids, as indicated by Round 5's analysis.",
+            "Continue conservative bidding (`max(Value - 15, 0)`) for Rounds 6-8. This phase tests opponent lower thresholds for efficient wins, despite Round 5 showing my bid was still high. Data from this phase will inform final adaptive strategies."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            74,
+            27,
+            68
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 77.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 22.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 53.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 53.0
+            }
+        },
+        "profit": [
+            21.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "For R7-R9, I'll refine conditional bidding. If V > 60, bid V+3 for strong profit. If 30 <= V <= 60, bid V+1 to secure moderate wins. If V < 30, bid V-5 (min 0) to avoid unprofitable wins, only winning if opponents are very low.",
+            "Given Round 6's significant loss, I will abandon the V+25 strategy for low values. For high values (>60), I'll bid V+5 for one round to secure profitable wins. For low values (<40), I'll bid V-5 for one round to identify low-cost win opportunities while minimizing risk. This balances data collection with immediate profit recovery.",
+            "Continue conservative bidding (`max(Value - 15, 0)`) for Rounds 7-8 as planned. This phase systematically gathers data on opponent lower thresholds and profitable underbidding opportunities, despite observed aggression. This data is crucial for the final adaptive strategy in Rounds 9-10."
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            53,
+            43,
+            64
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 55.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 38.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 59.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 55.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            9.0
+        ],
+        "common": 0,
+        "plan": [
+            "For R8-R9, I'll refine my strategy. If V > 60, I will bid V to test if this secures profitable wins without overbidding, based on R7's reflection. If 30 <= V <= 60, I will bid V+2 for moderate profit. If V < 30, I will bid V+3 to aggressively probe opponent thresholds for low-value items.",
+            "For high values (>60), I'll bid V+5 to secure profitable wins. For low values (<40), I'll bid V-5 to minimize risk and identify low-cost win opportunities. This balances profit recovery and continued data collection on opponent thresholds in the final rounds.",
+            "For Round 8, I will adapt. If my value is high (>60), I'll bid `Value - 5` to secure profit based on Round 7's lesson. Otherwise, I'll continue `max(Value - 15, 0)` to test lower thresholds. This balances profit with data collection, leading into the adaptive Rounds 9-10."
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            81,
+            20,
+            58
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 82.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 0.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 53.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 53.0
+            }
+        },
+        "profit": [
+            28.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "For R9-R10, I will bid V+1 to secure profitable wins on high values (V>60). For moderate values (30<=V<=60), I'll bid V-5 (min 0) to avoid unprofitable wins. For low values (V<30), I'll bid V-10 (min 0) to only win if",
+            "For high values (>60), I will bid V+5 to secure profitable wins, leveraging past success. For mid-range values (30-60), I'll bid V to V+2, aiming for cautious wins. For low values (<30), I will bid 0 to avoid unprofitable wins, prioritizing profit over winning.",
+            "For Rounds 9-10, I will bid `max(Value - 5, 0)`. This strategy aims to secure wins with a profit margin, adapting from the R8 analysis to bid aggressively low while still winning. This balances profit and data gathering for the final rounds."
+        ]
+    }
+}

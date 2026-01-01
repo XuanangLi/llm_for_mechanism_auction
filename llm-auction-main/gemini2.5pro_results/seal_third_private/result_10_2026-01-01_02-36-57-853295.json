@@ -1,0 +1,392 @@
+{
+    "round_0": {
+        "round": 0,
+        "value": [
+            40,
+            57,
+            17
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 95.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 87.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 87.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            -70.0
+        ],
+        "common": 0,
+        "plan": [
+            "I will initially employ an **aggressive overbidding strategy** (bidding $90\u2013$99) for Rounds 1\u20133, regardless of my value. This probes the \"price floor\" (the third-highest bid) and tests opponents' risk tolerance. Since I pay the lowest bid, I aim to win while hoping the third bid remains low. \n\nIn Rounds 4\u20136, I\u2019ll pivot to **value-linked bidding** (Value + $20) to see if lowering my bid reduces the clearing price. Finally, I\u2019ll analyze the historical minimum bid to determine an optimal \"bid cap\" that maximizes margin while maintaining a high win probability.",
+            "I will start with an aggressive **\"Value + $30\"** strategy to secure wins and probe Andy and Charles\u2019s tendencies. In a third-price auction, overbidding is often profitable since I only pay the lowest bid. Next, I\u2019ll test a **\"Fixed High\"** strategy (bid $90+) when my value exceeds $50 to gauge the maximum third-price risk. Finally, I\u2019ll compare these against a **\"Truthful Bidding\"** baseline. I will analyze the spread between the 1st and 3rd bids to identify if opponents are inflating bids, then optimize my margin to maximize long-term gains.",
+            "My strategy focuses on exploiting the third-price rule to maximize margins.\n\n1.  **Aggressive Overbidding:** Bid $v + 25$ (capped at 99) to increase win probability, testing if the third-highest bid remains significantly lower than my value.\n2.  **Boundary Testing:** Submit a bid of 99 in early rounds, regardless of value, to identify the typical \"floor\" price and gauge opponent aggression.\n3.  **Dynamic Pivot:** If the third-highest bid consistently exceeds my value, I will revert to bidding exactly $v$.\n\nI will analyze the delta between the second and third bids to optimize my overbidding margin."
+        ]
+    },
+    "round_1": {
+        "round": 1,
+        "value": [
+            75,
+            94,
+            20
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 95.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 94.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 20.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 20.0
+            }
+        },
+        "profit": [
+            55.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Round 0's $87 floor is extremely high. I will continue aggressive bidding ($90\u2013$99) for Round 1 to confirm if opponents sustain this behavior. If the third-highest bid remains above my value, I will pivot to value-based bidding early to avoid losses while gathering data on their floor.\n\n**Round 1**\n**Value:** 65",
+            "Opponents are hyper-aggressive (99, 95). I\u2019ll test **\"Truthful Bidding\"** (bid = value) to avoid losses while they overpay. I\u2019ll also experiment with **\"Strategic Underbidding\"** (Value - $10) to see if it influences the third-price and their behavior. I'll wait for bids to normalize before",
+            "Opponents bid aggressively (95, 87). I will test bidding exactly my value ($v$) to avoid losses while observing if their high bids persist. If the third-highest bid drops below my value, I'll transition to bidding $v+15$ to increase win probability while maintaining a profit margin."
+        ]
+    },
+    "round_2": {
+        "round": 2,
+        "value": [
+            50,
+            49,
+            39
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 39.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 39.0
+            }
+        },
+        "profit": [
+            11.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "Bid 99 to maximize win probability. The third-highest bid (20) was low, making high bids profitable. I\u2019ll test if this floor remains low. If the third bid spikes above my value (65), I\u2019ll pivot to value-based bidding next round to avoid potential losses while gathering data.",
+            "I'll test **Aggressive Max-Bidding** (bid 99) to capture high margins, as the third-price (lowest bid) was only 20. I'll also observe if opponents maintain a low-bid floor. If the third-price escalates, I\u2019ll switch to **Value-Based Bidding** to protect against overpaying when my value is low",
+            "ll test aggressive overbidding ($v+40$) when $v > 60$ to challenge their dominance and check if the third-price stays low. For $v \\le 60$, I\u2019ll bid exactly $v$ to minimize risk while gathering data on their continued aggression. (46 words).\n\n    Actually, in a third-price auction, bidding high is often"
+        ]
+    },
+    "round_3": {
+        "round": 3,
+        "value": [
+            37,
+            37,
+            37
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 0.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 0.0
+            }
+        },
+        "profit": [
+            37.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "I will continue bidding 99 to maximize win frequency, testing if the third-highest bid remains low. This aggressive approach exploits the third-price rule. If the third bid exceeds my value, I will switch to bidding my actual value to ensure long-term profitability and avoid losses.",
+            "I\u2019ll continue **Aggressive Max-Bidding** (bid 99) to exploit the third-price rule and win tie-breaks, as the lowest bid (39) remains low. If the third bid rises near my value, I\u2019ll switch to **Value-Based Bidding** to avoid losses if all three bidders bid high simultaneously.",
+            "Opponents bid 99, making winning unprofitable. I\u2019ll bid $0$ to observe if they maintain 99s when the price is minimal. This tests if they're using a fixed \"always 99\" strategy. I\u2019ll avoid high bids to prevent losses until their aggression subsides or a tactical opening appears."
+        ]
+    },
+    "round_4": {
+        "round": 4,
+        "value": [
+            86,
+            48,
+            62
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 99.0
+            }
+        },
+        "profit": [
+            0,
+            -51.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "I will continue bidding 99 to exploit the third-price rule as long as one opponent bids 0. This maximizes win probability at no cost. If the third-highest bid increases, I will shift to bidding my true value to avoid potential losses. I'll monitor the \"zero-bidder's\" behavior closely.",
+            "To exploit the current 0-bidder, I\u2019ll continue **Aggressive Max-Bidding** (99) to win tie-breaks and pay the minimum. If the third bidder increases their bid, I\u2019ll pivot to **Value-Based Bidding** to avoid heavy losses, as the third-price rule becomes risky when all three bidders bid high.",
+            "Opponents bid 99 to exploit my $0$ bid. I\u2019ll bid 99 to force the price to 99, punishing their aggression. This tests if they persist when profits hit zero or turn negative. Disrupting their strategy is essential for long-term gains, despite the immediate risk of a high-price win."
+        ]
+    },
+    "round_5": {
+        "round": 5,
+        "value": [
+            19,
+            80,
+            86
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 19.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 80.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 86.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 19.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            67.0
+        ],
+        "common": 0,
+        "plan": [
+            "Everyone bidding 99 makes the 3rd price 99, guaranteeing losses. I will now bid my true value to avoid negative profit. This tests if opponents will reduce their bids. If they continue bidding 99, I will stay disciplined, waiting for the market to cool down and prices to drop.",
+            "I\u2019ll test **Truthful Bidding** (bid = value) to avoid losses while Andy and Charles overbid. If they continue bidding 99, I\u2019ll stay out of the trap. If the third-highest bid drops below my value, I\u2019ll experiment with **Value + 10** to increase my winning probability profitably.",
+            "Bidding 99 is mutually destructive. I will now bid exactly my value. This protects me from losses while forcing the winner to pay my value as the third bid. I\u2019ll observe if opponents continue their 99-bid strategy or shift toward rational, profit-maximizing behavior to end this stalemate."
+        ]
+    },
+    "round_6": {
+        "round": 6,
+        "value": [
+            16,
+            71,
+            56
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 96.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 96.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            -40.0
+        ],
+        "common": 0,
+        "plan": [
+            "**Plan:** Since opponents bid high (80, 86), I\u2019ll bid 99 this round to test if the third price stays low enough for profit. This aggressive probe determines if I can exploit the third-price rule. If the third price spikes, I\u2019ll revert to value-bidding to protect my total profit.",
+            "I will pivot to **Aggressive Overbidding** (bid = value + 25, cap 99). Round 5's low third bid (19) suggests high profit potential. Bidding above value increases win probability without raising the price paid unless I am the third bidder. I'll monitor if others also escalate their bids.",
+            "I\u2019ll test bidding 99 to exploit the third-price rule, leveraging Betty\u2019s low bids to win cheaply. This aggressive strategy maximizes profit unless both opponents bid 99. I\u2019ll monitor if Andy remains rational or matches my aggression, adjusting to bid my value if the price becomes too high."
+        ]
+    },
+    "round_7": {
+        "round": 7,
+        "value": [
+            67,
+            4,
+            65
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 68.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 4.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 88.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Charles",
+                "price": 4.0
+            }
+        },
+        "profit": [
+            0,
+            0,
+            61.0
+        ],
+        "common": 0,
+        "plan": [
+            "**Plan:** Opponents are bidding near-maximum (99, 96), making the third price dangerously high. I will pivot to bidding my true value to avoid catastrophic losses. This \"wait-and-see\" approach protects my 103 profit while testing if opponents continue their aggressive, loss-inducing strategy or return to rational bidding.\n\nYour value is 68",
+            "Others are bidding 99, inflating the third-price to 96. To stop the bleeding, I will switch to bidding my true value. This ensures any win is profitable while I wait for their aggression to cool. I'll monitor if the third-price drops before attempting riskier strategies again.",
+            "Plan: I will pivot to bidding my actual value. My previous strategy of bidding 99 backfired because opponents also bid high, resulting in a high third price. Bidding my value ensures I never pay more than the prize is worth, protecting my balance while waiting for lower clearing prices.\n\nBid: 88"
+        ]
+    },
+    "round_8": {
+        "round": 8,
+        "value": [
+            7,
+            41,
+            46
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 99.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 99.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Betty",
+                "price": 99.0
+            }
+        },
+        "profit": [
+            0,
+            -58.0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "**Plan:** Opponents show polarized bidding (88 and 4). In third-price auctions, overbidding is optimal when the third price is low. I will bid 99 to secure the win, testing if the third price remains low to capture a large profit margin while monitoring for two high-bidding opponents.\n\n**Bid:** 99",
+            "Third-price auctions reward aggressive bidding. I\u2019ll test bidding 99 to secure wins, gambling that the third-highest bid remains low. This risky strategy aims to exploit the price gap and recover losses, provided at least one opponent bids conservatively. I\u2019ll monitor the third-price floor to refine future aggression.",
+            "**Plan:** I will continue bidding aggressively at 99. The third-highest bid was very low (4.0), making high bids extremely profitable. I will exploit this gap to secure wins, only pivoting if the third-highest bid rises significantly and threatens to exceed my value.\n\n**Bid:** 99"
+        ]
+    },
+    "round_9": {
+        "round": 9,
+        "value": [
+            94,
+            68,
+            27
+        ],
+        "history": {
+            "bidding history": [
+                {
+                    "agent": "Bidder Andy",
+                    "bid": 94.0
+                },
+                {
+                    "agent": "Bidder Betty",
+                    "bid": 68.0
+                },
+                {
+                    "agent": "Bidder Charles",
+                    "bid": 27.0
+                }
+            ],
+            "winner": {
+                "winner": "Bidder Andy",
+                "price": 27.0
+            }
+        },
+        "profit": [
+            67.0,
+            0,
+            0
+        ],
+        "common": 0,
+        "plan": [
+            "**Plan:** Everyone bidding 99 makes winning a guaranteed loss. I will pivot to bidding my true value to eliminate risk. This ensures I only win if the third price drops below my value, protecting my profit. I\u2019ll monitor if opponents maintain this aggressive \"suicide\" strategy or adjust.\n\n**Bid:** [Value]",
+            "Bidding 99 failed because everyone matched it, creating a $99 third-price. I\u2019ll now bid my true value to eliminate negative profit risk. I\u2019m testing if opponents will also retreat from the 99-bid ceiling. If they continue bidding 99, I\u2019ll stay safe; if they lower, I\u2019ll exploit the gap.",
+            "**Plan:** Everyone bidding 99 is ruinous. I will pivot to bidding my true value. This protects against negative profit while testing if competitors remain aggressive. If they continue bidding 99, I avoid losses. If they lower their bids, I am positioned to win profitably.\n\n**Bid:** [My Value]"
+        ]
+    }
+}

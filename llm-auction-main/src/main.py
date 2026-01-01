@@ -3,11 +3,15 @@ import logging
 import os
 import pandas as pd
 import sys
+from pathlib import Path
+from dotenv import load_dotenv
 # from util import Rule, Auction
 # from util_human import Auction_human
 from util_plan import Auction_plan, Rule_plan
 from util_ebay import Auction_ebay
 import concurrent.futures
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
 
 def run_auction(i, human, number_agents, rule, output_dir, c):
     timestring = pd.Timestamp.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
@@ -15,21 +19,21 @@ def run_auction(i, human, number_agents, rule, output_dir, c):
         ...
         # a = Auction_human(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=1)
     elif ebay:
-        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
+        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-flash-preview', temperature=0.5)
     else:
-        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o-mini', temperature=0.5)
+        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-flash-preview', temperature=0.5)
     a.draw_value(seed=1401 + i) ## 1399 for affiliated ## 1299 private
     a.run_repeated()
     c.write_jsonl(os.path.join(output_dir, f"raw_output__{timestring}.jsonl"))
 
 if __name__ == "__main__":
     c = Cache()
-    
+     
     # Rule Option Menu
-    seal_clock = 'clock'
+    seal_clock = 'seal'
     ascend_descend = 'ascend'  ### ascend / descend
-    price_order = ''      ### first / second / third / all-pay
-    private_value = 'affiliated'  ### private / common / affiliated
+    price_order = 'third'      ### first / second / third / allpay
+    private_value = 'private'  ### private / common / affiliated
     open_blind = 'blind'            ### In AC, whether the information is blind or open
     number_agents = 3
     human = False                  ## Humanistic prompt or not
@@ -39,7 +43,7 @@ if __name__ == "__main__":
     closing = True
     reserve_price = 60
     
-    output_dir = f"gpt4o-mini_results/clock_ascend_affiliated_closed"  #/CLOCK
+    output_dir = f"gemini2.5pro_results/seal_third_private" 
     # {seal_clock}_{ascend_descend}_{price_order}_{private_value}_{open_blind}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -51,7 +55,7 @@ if __name__ == "__main__":
         open_blind=open_blind, 
         rounds=round, turns=turns , common_range=[20, 79], private_range=99, increment=1, 
         number_agents=number_agents,
-        special_name="affiliated_ac_closed.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
+        special_name="private_third_price.txt", # private_all_pay.txt / affiliated_ac.txt / common_spsb.txt
         closing = closing,
         reserve_price = reserve_price)
     rule.describe()
