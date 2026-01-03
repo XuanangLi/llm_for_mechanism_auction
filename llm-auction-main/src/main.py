@@ -19,9 +19,9 @@ def run_auction(i, human, number_agents, rule, output_dir, c):
         ...
         # a = Auction_human(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gpt-4o', temperature=1)
     elif ebay:
-        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-flash-preview', temperature=0.5)
+        a = Auction_ebay(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-pro-preview', temperature=0.5)
     else:
-        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-flash-preview', temperature=0.5)
+        a = Auction_plan(number_agents=number_agents, rule=rule, output_dir=output_dir, timestring=timestring, cache=c, model='gemini-3-pro-preview', temperature=0)
     a.draw_value(seed=1401 + i) ## 1399 for affiliated ## 1299 private
     a.run_repeated()
     c.write_jsonl(os.path.join(output_dir, f"raw_output__{timestring}.jsonl"))
