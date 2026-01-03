@@ -12,9 +12,9 @@ from statsmodels.nonparametric.smoothers_lowess import lowess
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 FILES = [
-    "gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-24-18-723835.json",
-    "gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-37-29-846018.json",
-    "gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-50-49-259701.json",
+    "gpt4o-mini_results/SEAL/seal_second_private/result_10_2025-12-21_11-54-33-937314.json", #"gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-24-18-723835.json",
+    "gpt4o-mini_results/SEAL/seal_second_private/result_10_2025-12-21_11-58-38-415545.json", #"gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-37-29-846018.json",
+    "gpt4o-mini_results/SEAL/seal_second_private/result_10_2025-12-21_12-02-28-603006.json", #"gemini2.5flash_results/seal_second_private/result_10_2025-12-30_19-50-49-259701.json",
 ]
 
 # agent order
@@ -102,7 +102,7 @@ def plot_first_price_value_vs_bid(
     xx = np.linspace(xmin, xmax, 300)
 
     # 黑色虚线：y = x （Actual Value）
-    plt.plot(xx, xx, "k--", linewidth=2.2, label="Actual Value")
+    plt.plot(xx, xx, "k--", linewidth=2.2, label="Dominant Strategy")
 
     # 绿色虚线：First-price risk-neutral BNE: (n-1)/n * v
     #bne = (n_bidders - 1) / n_bidders * xx
@@ -132,10 +132,37 @@ def plot_first_price_value_vs_bid(
 if __name__ == "__main__":
     df_all = load_all_runs(PROJECT_ROOT, FILES)
     print(df_all.head())
+    
+    # =========================
+    # 1️⃣ 理论 benchmark（Second-Price）
+    # =========================
+    # Dominant strategy: truthful bidding
+    df_all["actual_value"] = df_all["value"]
+
+    # =========================
+    # 2️⃣ 绝对偏差（只算这一种）
+    # =========================
+    df_all["abs_dev_truthful"] = (df_all["bid"] - df_all["actual_value"]).abs()
+
+    # =========================
+    # 3️⃣ 打印 pooled 结果
+    # =========================
+    print("\n=== Absolute Deviation from Truthful Bidding (SPSB) ===")
+    print(df_all["abs_dev_truthful"].describe())
+
+    # =========================
+    # 4️⃣ 可选：按 run
+    # =========================
+    print("\n=== Deviation by Run ===")
+    print(
+        df_all
+        .groupby("run_id")["abs_dev_truthful"]
+        .mean()
+    )
 
     plot_first_price_value_vs_bid(
         df_all,
         lowess_frac=0.25,       # 越大越平滑；0.2~0.35 一般都不错
         n_bidders=len(AGENTS),  # 这里是 3
-        save_path=PROJECT_ROOT / "plots" / "gemini2.5flash" / "spsb.png",
+        save_path=PROJECT_ROOT / "plots" / "gpt4o-mini" / "spsb.png",
     )

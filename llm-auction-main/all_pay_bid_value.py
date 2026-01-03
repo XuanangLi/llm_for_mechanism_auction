@@ -12,9 +12,9 @@ from statsmodels.nonparametric.smoothers_lowess import lowess
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 FILES = [
-    "gemini2.5flash_results/seal_all_pay_private/result_10_2025-12-30_21-07-30-227075.json",
-    "gemini2.5flash_results/seal_all_pay_private/result_10_2025-12-30_21-25-17-010916.json",
-    "gemini2.5flash_results/seal_all_pay_private/result_10_2025-12-30_21-42-12-429023.json",
+    "gpt4o-mini_results/SEAL/seal_all_pay_private/result_10_2025-12-21_12-19-58-280238.json",
+    "gpt4o-mini_results/SEAL/seal_all_pay_private/result_10_2025-12-21_12-24-11-233660.json",
+    "gpt4o-mini_results/SEAL/seal_all_pay_private/result_10_2025-12-21_12-28-27-573423.json",
 ]
 
 # agent order
@@ -139,9 +139,43 @@ if __name__ == "__main__":
     df_all = load_all_runs(PROJECT_ROOT, FILES)
     print(df_all.head())
 
+    # =========================
+    # 1️⃣ 理论 benchmark
+    # =========================
+    n_bidders = len(AGENTS)  # 这里不一定用得到，但保留你的模板风格
+
+    # Actual value benchmark（用于对比）
+    df_all["actual_value"] = df_all["value"]
+
+    # All-Pay Bayes–Nash equilibrium (IPV, risk-neutral, U[0,99])
+    V_MAX = 99.0
+    df_all["bne_bid"] = (2.0 / (3.0 * (V_MAX ** 2))) * (df_all["value"] ** 3)
+
+    # =========================
+    # 2️⃣ 绝对偏差
+    # =========================
+    df_all["abs_dev_actual"] = (df_all["bid"] - df_all["actual_value"]).abs()
+    df_all["abs_dev_bne"] = (df_all["bid"] - df_all["bne_bid"]).abs()
+
+    # =========================
+    # 3️⃣ 打印结果（整体）
+    # =========================
+    print("\n=== All-Pay Absolute Deviation Summary (Pooled) ===")
+    print(df_all[["abs_dev_actual", "abs_dev_bne"]].describe())
+
+    # =========================
+    # 4️⃣ 可选：按 run 打印
+    # =========================
+    print("\n=== All-Pay Absolute Deviation by Run ===")
+    print(
+        df_all
+        .groupby("run_id")[["abs_dev_actual", "abs_dev_bne"]]
+        .mean()
+    )
+
     plot_first_price_value_vs_bid(
         df_all,
         lowess_frac=0.25,       # 越大越平滑；0.2~0.35 一般都不错
         n_bidders=len(AGENTS),  # 这里是 3
-        save_path=PROJECT_ROOT / "plots" / "gemini2.5flash" / "appsb.png",
+        save_path=PROJECT_ROOT / "plots" / "gpt4o-mini" / "appsb.png",
     )

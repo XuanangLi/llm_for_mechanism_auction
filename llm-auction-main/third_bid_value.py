@@ -12,9 +12,9 @@ from statsmodels.nonparametric.smoothers_lowess import lowess
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 FILES = [
-    "gemini2.5flash_results/seal_third_private/result_10_2025-12-30_20-09-25-857770.json",
-    "gemini2.5flash_results/seal_third_private/result_10_2025-12-30_20-23-22-475877.json",
-    "gemini2.5flash_results/seal_third_private/result_10_2025-12-30_20-37-01-682605.json",
+    "gpt4o-mini_results/SEAL/seal_third_private/result_10_2025-12-24_00-42-15-012077.json",
+    "gpt4o-mini_results/SEAL/seal_third_private/result_10_2025-12-24_00-46-57-642208.json",
+    "gpt4o-mini_results/SEAL/seal_third_private/result_10_2025-12-24_00-50-51-961824.json",
 ]
 
 # agent order
@@ -134,9 +134,45 @@ if __name__ == "__main__":
     df_all = load_all_runs(PROJECT_ROOT, FILES)
     print(df_all.head())
 
+    # =========================
+    # 1️⃣ 理论 benchmark
+    # =========================
+    n_bidders = len(AGENTS)
+    if n_bidders <= 2:
+        raise ValueError("Third-price auction requires n_bidders >= 3.")
+
+    # Actual value benchmark（用于对比）
+    df_all["actual_value"] = df_all["value"]
+
+    # Third-Price Bayes–Nash equilibrium
+    # b(v) = (n-1)/(n-2) * v
+    df_all["bne_bid"] = (n_bidders - 1) / (n_bidders - 2) * df_all["value"]
+
+    # =========================
+    # 2️⃣ 绝对偏差
+    # =========================
+    df_all["abs_dev_actual"] = (df_all["bid"] - df_all["actual_value"]).abs()
+    df_all["abs_dev_bne"] = (df_all["bid"] - df_all["bne_bid"]).abs()
+
+    # =========================
+    # 3️⃣ 打印结果（整体）
+    # =========================
+    print("\n=== Third-Price Absolute Deviation Summary (Pooled) ===")
+    print(df_all[["abs_dev_actual", "abs_dev_bne"]].describe())
+
+    # =========================
+    # 4️⃣ 可选：按 run 打印
+    # =========================
+    print("\n=== Third-Price Absolute Deviation by Run ===")
+    print(
+        df_all
+        .groupby("run_id")[["abs_dev_actual", "abs_dev_bne"]]
+        .mean()
+    )
+
     plot_first_price_value_vs_bid(
         df_all,
         lowess_frac=0.25,       # 越大越平滑；0.2~0.35 一般都不错
         n_bidders=len(AGENTS),  # 这里是 3
-        save_path=PROJECT_ROOT / "plots" / "gemini2.5flash" / "tpsb.png",
+        save_path=PROJECT_ROOT / "plots" / "gpt4o-mini" / "tpsb.png",
     )

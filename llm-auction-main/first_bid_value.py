@@ -12,9 +12,9 @@ from statsmodels.nonparametric.smoothers_lowess import lowess
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 FILES = [
-    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-31-40-114606.json",
-    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-42-16-561406.json",
-    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-54-04-824468.json",
+    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-31-40-114606.json", #"gpt4o-mini_results/SEAL/seal_first_private/result_10_2025-12-21_11-18-36-293805.json",
+    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-42-16-561406.json", #"gpt4o-mini_results/SEAL/seal_first_private/result_10_2025-12-21_11-23-20-690396.json",
+    "gemini2.5flash_results/seal_first_private/result_10_2025-12-30_15-54-04-824468.json", #"gpt4o-mini_results/SEAL/seal_first_private/result_10_2025-12-21_11-26-55-472134.json",
 ]
 
 # agent order
@@ -132,6 +132,39 @@ def plot_first_price_value_vs_bid(
 if __name__ == "__main__":
     df_all = load_all_runs(PROJECT_ROOT, FILES)
     print(df_all.head())
+
+    # =========================
+    # 1️⃣ 理论 benchmark
+    # =========================
+    n_bidders = len(AGENTS)
+
+    # Actual value benchmark
+    df_all["actual_value"] = df_all["value"]
+
+    # FPSB Bayes–Nash equilibrium
+    df_all["bne_bid"] = (n_bidders - 1) / n_bidders * df_all["value"]
+
+    # =========================
+    # 2️⃣ 绝对偏差
+    # =========================
+    df_all["abs_dev_actual"] = (df_all["bid"] - df_all["actual_value"]).abs()
+    df_all["abs_dev_bne"] = (df_all["bid"] - df_all["bne_bid"]).abs()
+
+    # =========================
+    # 3️⃣ 打印结果（整体）
+    # =========================
+    print("\n=== Absolute Deviation Summary (Pooled) ===")
+    print(df_all[["abs_dev_actual", "abs_dev_bne"]].describe())
+
+    # =========================
+    # 4️⃣ 可选：按 run 打印
+    # =========================
+    print("\n=== Absolute Deviation by Run ===")
+    print(
+        df_all
+        .groupby("run_id")[["abs_dev_actual", "abs_dev_bne"]]
+        .mean()
+    )
 
     plot_first_price_value_vs_bid(
         df_all,
