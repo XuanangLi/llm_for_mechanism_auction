@@ -13,7 +13,8 @@
 
 ## Overview
 
-# This repository reproduces the numerical results in our paper: A Survey on Mechanism Design Meets Large Language Models
+This repository reproduces the numerical results in our paper: A Survey on Mechanism Design Meets Large Language Models
+
 ---
 
 ## Getting Started
