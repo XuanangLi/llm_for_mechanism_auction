@@ -6,9 +6,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.nonparametric.smoothers_lowess import lowess
 
-# -----------------------
-# 1) 路径与文件
-# -----------------------
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 FILES = [
@@ -20,9 +17,7 @@ FILES = [
 # agent order
 AGENTS = ["Bidder Andy", "Bidder Betty", "Bidder Charles"]
 
-# -----------------------
-# 2) 读 JSON 并抽取点云 (value, bid)
-# -----------------------
+
 def load_one_run(json_path: Path, run_id: int) -> pd.DataFrame:
     with open(json_path, "r") as f:
         data = json.load(f)
@@ -59,7 +54,7 @@ def load_one_run(json_path: Path, run_id: int) -> pd.DataFrame:
 def load_all_runs(project_root: Path, files: list[str]) -> pd.DataFrame:
     paths = [project_root / fp for fp in files]
 
-    # 文件存在性检查
+
     for p in paths:
         if not p.exists():
             raise FileNotFoundError(f"File not found: {p}")
@@ -70,9 +65,6 @@ def load_all_runs(project_root: Path, files: list[str]) -> pd.DataFrame:
     return pd.concat(dfs, ignore_index=True)
 
 
-# -----------------------
-# 3) 画 First-Price 图：点云 + y=x + BNE + LOWESS
-# -----------------------
 def plot_first_price_value_vs_bid(
     df: pd.DataFrame,
     lowess_frac: float = 0.25,
@@ -82,10 +74,8 @@ def plot_first_price_value_vs_bid(
     x = df["value"].to_numpy()
     y = df["bid"].to_numpy()
 
-    # 画布
     plt.figure(figsize=(8, 5.8))
 
-    # 点云：可以按 run 叠加，也可以 pooled 一起画
     markers = {1: "o", 2: "s", 3: "^", 4: "D"}
     for run_id, sub in df.groupby("run_id"):
         plt.scatter(
@@ -97,31 +87,23 @@ def plot_first_price_value_vs_bid(
             label=f"Bids (Run {run_id})",
         )
 
-    # 范围
     xmin, xmax = float(np.min(x)), float(np.max(x))
     xx = np.linspace(xmin, xmax, 300)
 
-    # 黑色虚线：y = x （Actual Value）
     plt.plot(xx, xx, "k--", linewidth=2.2, label="Dominant Strategy")
 
-    # 绿色虚线：First-price risk-neutral BNE: (n-1)/n * v
-    #bne = (n_bidders - 1) / n_bidders * xx
     #plt.plot(xx, bne, linestyle="--", linewidth=2.2, label=r"Bayes-Nash Equilibrium Strategy: $\frac{n-1}{n}v$")
 
-    # 红色 LOWESS 平滑
     sm = lowess(y, x, frac=lowess_frac, return_sorted=True)
     plt.plot(sm[:, 0], sm[:, 1], linewidth=2.8, label="Smoothed Data")
 
-    # 标题与轴
     plt.title("Second-Price: Assigned Value vs. Bid")
     plt.xlabel("Assigned value for the good")
     plt.ylabel("LLM agent's bid")
 
-    # 图例
     plt.legend(loc="upper left")
     plt.tight_layout()
 
-    # 保存
     if save_path is not None:
         save_path.parent.mkdir(parents=True, exist_ok=True)
         plt.savefig(save_path, dpi=200)
@@ -133,26 +115,14 @@ if __name__ == "__main__":
     df_all = load_all_runs(PROJECT_ROOT, FILES)
     print(df_all.head())
     
-    # =========================
-    # 1️⃣ 理论 benchmark（Second-Price）
-    # =========================
     # Dominant strategy: truthful bidding
     df_all["actual_value"] = df_all["value"]
 
-    # =========================
-    # 2️⃣ 绝对偏差（只算这一种）
-    # =========================
     df_all["abs_dev_truthful"] = (df_all["bid"] - df_all["actual_value"]).abs()
 
-    # =========================
-    # 3️⃣ 打印 pooled 结果
-    # =========================
     print("\n=== Absolute Deviation from Truthful Bidding (SPSB) ===")
     print(df_all["abs_dev_truthful"].describe())
 
-    # =========================
-    # 4️⃣ 可选：按 run
-    # =========================
     print("\n=== Deviation by Run ===")
     print(
         df_all
@@ -162,7 +132,7 @@ if __name__ == "__main__":
 
     plot_first_price_value_vs_bid(
         df_all,
-        lowess_frac=0.25,       # 越大越平滑；0.2~0.35 一般都不错
-        n_bidders=len(AGENTS),  # 这里是 3
+        lowess_frac=0.25,       
+        n_bidders=len(AGENTS),
         save_path=PROJECT_ROOT / "plots" / "gpt4o-mini" / "spsb.png",
     )
