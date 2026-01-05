@@ -14,10 +14,6 @@
 ## Overview
 
 This repository accompanies our paper: A Survey on Mechanism Design Meets Large Language Models
-
-<p align="center">
-  <img src="overview.png" alt="Project overview diagram" width="650">
-</p>
 ---
 
 ## Getting Started
