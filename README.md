@@ -68,7 +68,7 @@ python first_bid_value.py # second_bid_value.py | third_bid_value.py | all_pay_b
 ### 3 Results
 
 After running `main.py`, all turns results will saved to file path: llm-auction-main/{model_name}_{results}.
-All plots will be included in the file: llm-auction-main/plots
+All plots will be included in the file: [llm-auction-main/plots](https://github.com/XuanangLi/llm_for_mechanism_auction/tree/main/llm-auction-main/plots).
 
 ---
 
