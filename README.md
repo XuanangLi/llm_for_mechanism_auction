@@ -54,40 +54,18 @@ The code is based on paper [Learning from Synthetic Labs: Language Models as Auc
 
 | Value regime        | Seeds used      |
 | ------------------- | --------------- |
-| Private             | **1299 – 1309** |
-| Affiliated & Common | **1399 – 1409** |
+| Private             | **1401**        |
+| Affiliated & Common | **1401**        |
 
-All experiments use **GPT‑4**, `temperature = 0.5`.
+Our experiments use **GPT‑4o-mini**, `temperature = 0.5`; **GPT‑5.1**, `temperature = 0.5`; **Gemini-2.5-flash**, `temperature = 0.5`.
 
-### 2  Cached runs (default)
+### 2  Drawing bid-value plot
 
-```python
-results = survey.by(model).run(
-    remote_inference_description="cache reuse", 
-    remote_inference_visibility="public"         
-)
-```
+python first_bid_value.py # second_bid_value.py | third_bid_value.py | all_pay_bid_value.py
 
-The snippet above will *first look in the cache*; if a match is found, the result is loaded instantly.
-
-### 3  Forcing a fresh run (optional)
-
-To ignore the cache—for instance, when testing a new prompt—add `fresh=True`:
-
-```python
-results = survey.by(model).run(
-    remote_inference_description="fresh run",
-    remote_inference_visibility="public",
-    fresh=True
-)
-```
-
-### 4  Verifying cache hits
-
-EDSL prints the **Job UUID** and whether it was served from cache. You can also inspect the universal cache via the web UI linked in the EDSL docs.
 
 ---
 
 
 ## 🔧 Dependencies
-The main third-party package requirement are `openai` and `edsl`.
+The main third-party package requirement are `openai`, `gemini` and `edsl`.
