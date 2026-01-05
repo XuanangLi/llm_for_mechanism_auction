@@ -44,31 +44,7 @@ All experiments are launched via one of the three driver scripts below. Use the 
 | Auction type           | Driver script          | Required flags                                                                                           | Optional flags                                                                               |
 | ---------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | **Sealed‑bid**         | `main.py`              | `--seal_clock seal`                                                                                      | `--price_order {first,second,third,allpay}`<br>`--private_value {private,affiliated,common}` |
-| **Clock**              | `main.py`              | `--seal_clock clock`<br>`--ascend_descend descend`                                                       | `--open_blind {open,blind}`<br>`--private_value {private,affiliated,common}`                 |
-| **Ebay proxy**         | `main_ebay.py`         | `--seal_clock ebay` *(fixed)*<br>`--price_order second` *(fixed)*<br>`--private_value private` *(fixed)* | `--turns 10`<br>`--closing {true,false}`<br>`--reserve_price 60`                             |
-| **Intervention study** | `main_intervention.py` | *(inherits flags from sealed‑bid)*                                                                       |                                                                                              |
 
-### Quick examples
-
-Run a second‑price sealed‑bid auction:
-
-```bash
-python main.py 
-```
-
-Run a second‑price sealed‑bid auction with intervention:
-
-```bash
-python main_intervention.py 
-```
-
-Run the Ebay‑style proxy auction:
-
-```bash
-python main_ebay.py
-```
-You can vary all the hyperparameters in these main functions.
----
 
 ## Reproducing Our Results
 
@@ -112,12 +88,6 @@ EDSL prints the **Job UUID** and whether it was served from cache. You can also
 
 ---
 
-Happy experimenting! If anything is unclear, please open an issue 🙌
-
-
 
 ## 🔧 Dependencies
 The main third-party package requirement are `openai` and `edsl`.
-
-## 💡 Contributing, Feature Asks, and Bugs
-Interested collaborating in LLM as auction participants? Found a nasty bug that you would like us to squash? Please send us an email at kehangzhu@gmail.com.
