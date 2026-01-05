@@ -48,8 +48,7 @@ All experiments are launched via one of the three driver scripts below. Use the 
 
 ## Reproducing Our Results
 
-The code is based on [Learning from Synthetic Labs: Language Models as Auction Participants](https://github.com/KeHang-Zhu/llm-auction).
-%We use **[EDSL](https://docs.expectedparrot.com/en/latest/)**, whose universal remote cache stores every completed LLM call. Re‑running our code with the *same prompt* and *same random seed* therefore incurs **no additional API cost**—results are retrieved automatically.
+The code is based on paper [Learning from Synthetic Labs: Language Models as Auction Participants](https://github.com/KeHang-Zhu/llm-auction).
 
 ### 1  Seeds and model settings
 
