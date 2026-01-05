@@ -61,11 +61,13 @@ Our experiments use **GPT‑4o-mini**, `temperature = 0.5`; **GPT‑5.1**, `
 
 ### 2  Drawing bid-value plot
 
+```
 python first_bid_value.py # second_bid_value.py | third_bid_value.py | all_pay_bid_value.py
+```
 
 ### 3 Results
 
-After running main.py, all turns results will saved to file path: llm-auction-main/{model_name}_{results}.
+After running `main.py`, all turns results will saved to file path: llm-auction-main/{model_name}_{results}.
 All plots will be included in the file: llm-auction-main/plots
 
 ---
